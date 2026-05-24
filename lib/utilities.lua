@@ -2,12 +2,12 @@
 STAR_UTIL.enabled_jokers = {
   "astro",
   "scrap",
-  "vermi",
 
   "flash_card",
-  
-  "crystal",
-  "shard",
+
+  "radiant_joker",
+  "subtle_joker",
+  "the_nuclear_family"
 }
 
 -- Consumables table

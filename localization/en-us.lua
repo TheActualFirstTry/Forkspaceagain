@@ -39,10 +39,34 @@ return {
       j_star_flash_card = {
         name = "'Flash' Card",
         text = {
-          "This Joker gains {X:chips,C:white}X#1#{} Chips",
-          "if played hand contains a {C:attention}Flash{}",
+          "This Joker gains {X:chips,C:white}X#1#{} Chips if",
+          "played hand contains a {C:attention}Flash{}",
           "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
         }
+      },
+      j_star_radiant_joker = {
+        name = "Radiant Joker",
+        text = {
+          "{C:mult}+#1#{} Mult if played",
+          "hand contains",
+          "a {C:attention}Flash{}"
+        }
+      },
+      j_star_subtle_joker = {
+        name = "Subtle Joker",
+        text = {
+          "{C:chips}+#1#{} Chips if played",
+          "hand contains",
+          "a {C:attention}Flash{}"
+        }
+      },
+      j_star_the_nuclear_family = {
+        name = "The Nuclear Family",
+       text = {
+        "{X:mult,C:white}X#1#{} Mult if played",
+        "hand contains",
+        "a {C:attention}Flash{}"
+       }
       },
       j_star_crystal = {
         name = "Crystal",
@@ -107,3 +131,4 @@ return {
     }
   }
 }
+
