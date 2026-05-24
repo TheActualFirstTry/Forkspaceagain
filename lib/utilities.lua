@@ -6,6 +6,7 @@ STAR_UTIL.enabled_jokers = {
   "astroling",
   "flash_card",
 
+  "copper_shortsword",
   "radiant_joker",
   "subtle_joker",
   "the_nuclear_family"
