@@ -4,6 +4,8 @@ STAR_UTIL.enabled_jokers = {
   "scrap",
   "vermi",
 
+  "flash_card",
+  
   "crystal",
   "shard",
 }

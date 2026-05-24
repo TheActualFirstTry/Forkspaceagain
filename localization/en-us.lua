@@ -36,6 +36,14 @@ return {
           "{C:inactive}(Resets after hand scores){}",
         }
       },
+      j_star_flash_card = {
+        name = "'Flash' Card",
+        text = {
+          "This Joker gains {X:chips,C:white}X#1#{} Chips",
+          "if played hand contains a {C:attention}Flash{}",
+          "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
+        }
+      },
       j_star_crystal = {
         name = "Crystal",
         text = {

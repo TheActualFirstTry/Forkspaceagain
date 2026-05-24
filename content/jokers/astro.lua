@@ -4,7 +4,6 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   config = { extra = {
     xchips = 1.5,
-    scale_this_hand = true
   } },
   rarity = 3,
   cost = 8,
@@ -22,7 +21,7 @@ SMODS.Joker {
   calculate = function(self, card, context)      
     if context.other_joker and context.other_joker:has_attribute("friends_of_astro")
       then return {
-        x_chips = card.ability.extra.xchips
+        xchips = card.ability.extra.xchips
       }
     end
   end
