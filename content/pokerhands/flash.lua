@@ -123,7 +123,8 @@ SMODS.Consumable {
   key = "planet_popstar",
   set = "Planet",
   cost = 3,
-  atlas = "placeholder",
+  atlas = "consumables",
+  pos = {x=0,y=2},
   config = { hand_type = "star_flash" },
   loc_vars = function(self, info_queue, card)
     return { vars = {
