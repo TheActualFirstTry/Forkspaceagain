@@ -3,7 +3,7 @@ SMODS.Joker {
   atlas = "jokers",
   pos = { x = 0, y = 0 },
   config = { extra = {
-    xchips = 2,
+    xchips = 1.5,
     scale_this_hand = true
   } },
   rarity = 3,
