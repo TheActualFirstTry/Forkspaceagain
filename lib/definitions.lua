@@ -1,20 +1,17 @@
 -- Friends of Astro pool
+SMODS.Attribute {
+  key = "friends_of_astro"
+}
+
 SMODS.ObjectType {
   key = "friends_of_astro",
   default = "j_star_astro",
   cards = {}
 }
 
--- Rarities
 SMODS.Rarity {
-  key = "cosmic",
-  badge_colour = HEX("ED3BAF"),
-  default_weight = 0.025
-}
-
-SMODS.Rarity {
-  key = "galactic",
-  badge_colour = HEX("00E4FF"),
+  key = "galaxy",
+  badge_colour = HEX("B775E0"),
   default_weight = 0
 }
 

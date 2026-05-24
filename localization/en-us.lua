@@ -14,14 +14,12 @@ return {
       j_star_astro = {
         name = "Astro",
         text = {
-          "Gains {X:chips,C:white}X#1#{} Chips when a",
-          "{C:spades}Spade{} card is scored if played",
-          "hand does not contain a {C:hearts}Heart{}",
-          "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips)"
+          "Friend Jokers each",
+          "give {X:chips,C:white}X#1#{} Chips"
         }
       },
-      j_star_glorp = {
-        name = "Glorp",
+      j_star_vermi = {
+        name = "Vermi",
         text = {
           "{X:mult,C:white}X#1#{} Mult during",
           "{C:attention}context.#2#{}",
@@ -32,10 +30,10 @@ return {
       j_star_scrap = {
         name = "Scrap",
         text = {
-          "Gains {X:mult,C:white}X#1#{} Mult when a",
-          "{C:hearts}Heart{} card is scored if played",
-          "hand does not contain a {C:spades}Spade{}",
-          "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+          "When a {C:tarot}Tarot Card{} is used, balance",
+          " {C:chips}Chips{} and {C:mult}Mult{} when calculating",
+          "score for next played hand",
+          "{C:inactive}(Resets after hand scores){}",
         }
       },
       j_star_crystal = {
@@ -52,20 +50,6 @@ return {
           "leftmost and rightmost {C:attention}Jokers{}"
         }
       },
-      j_star_samson = {
-        name = "Samson",
-        text = {
-          "{C:attention}Retriggers{} all played or",
-          "held in hand {C:attention}Gold Cards{}"
-        }
-      },
-      j_star_isotypical = {
-        name = "Isotypical",
-        text = {
-          "Hand calculation is set to",
-          "{X:dark_edition,C:white,s:1.2}Chips^log10(Mult^0.75){}"
-        }
-      }
     },
     Other = {
     },
@@ -88,8 +72,7 @@ return {
   misc = {
     dictionary = {
       -- Rarities
-      k_star_cosmic = "Cosmic",
-      k_star_galactic = "Galactic",
+      k_star_galaxy = "Galaxy",
 
       -- Credits
       star_ui_squad = "Core Team",
@@ -98,8 +81,7 @@ return {
       star_ui_shaders = "Shaders",
     },
     labels = {
-      k_star_cosmic = "Cosmic",
-      k_star_galactic = "Galactic",
+      k_star_galaxy = "Galaxy",
     },
     poker_hands = {
       star_flash = "Flash",

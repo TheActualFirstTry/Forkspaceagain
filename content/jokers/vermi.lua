@@ -8,9 +8,9 @@ local contexts = {
 }
 
 SMODS.Joker {
-  key = "glorp",
-  atlas = "jokers",
-  pos = { x = 5, y = 0 },
+  key = "vermi",
+  atlas = "placeholder",
+  pos = { x = 0, y = 0 },
   rarity = 2,
   cost = 8,
   blueprint_compat = true,
@@ -18,6 +18,9 @@ SMODS.Joker {
   perishable_compat = true,
   pronouns = "it_its",
   pools = {
+    friends_of_astro = true
+  },
+  attributes = {
     friends_of_astro = true
   },
 
@@ -35,13 +38,13 @@ SMODS.Joker {
 
   set_ability = function(self, card, initial, delay_sprites)
     -- pick a new context
-    card.ability.extra.current_context = pseudorandom_element(contexts, "glorp_contexts")
+    card.ability.extra.current_context = pseudorandom_element(contexts, "vermi_contexts")
   end,
 
   calculate = function(self, card, context)
     -- pick a new context
     if context.end_of_round and context.cardarea == G.jokers then
-      card.ability.extra.current_context = pseudorandom_element(contexts, "glorp_contexts")
+      card.ability.extra.current_context = pseudorandom_element(contexts, "vermi_contexts")
     end
 
     -- give xmult
