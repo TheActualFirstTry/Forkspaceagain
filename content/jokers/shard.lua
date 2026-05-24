@@ -1,6 +1,6 @@
 SMODS.Joker {
     key = "shard",
-    rarity = "star_cosmic",
+    rarity = 3,
     cost = 16,
     atlas = "jokers",
     pos = {x=6,y=0},
