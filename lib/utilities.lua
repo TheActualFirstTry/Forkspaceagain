@@ -4,6 +4,7 @@ STAR_UTIL.enabled_jokers = {
   "scrap",
 
   "astroling",
+  "scrap_machete",
   "flash_card",
 
   "copper_shortsword",

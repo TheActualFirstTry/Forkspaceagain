@@ -22,7 +22,7 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
-    if context.before and context.poker_hands['star_flash'] then
+    if context.before and context.poker_hands['star_flash'] and not context.blueprint then
     card.ability.extra.xchips = card.ability.extra.xchips + card.ability.extra.xchips_gain
     return {
       message = localize {

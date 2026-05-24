@@ -43,6 +43,13 @@ return {
           "count as the same suit"
         }
       },
+      j_star_scrap_machete = {
+        name = "Scrap's Machete",
+        text = {
+          "{C:mult}+#1#{} Mult for each {C:tarot}Tarot{} card",
+          "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+        }
+      },
       j_star_flash_card = {
         name = "'Flash' Card",
         text = {
