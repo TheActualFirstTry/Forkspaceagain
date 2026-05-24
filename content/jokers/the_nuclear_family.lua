@@ -6,7 +6,7 @@ SMODS.Joker {
     xmult = 2
   } },
   rarity = 3,
-  cost = 4,
+  cost = 8,
   blueprint_compat = true,
   eternal_compat = true,
   perishable_compat = false,

@@ -51,6 +51,15 @@ return {
           "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
         }
       },
+      j_star_copper_shortsword ={
+        name = "Copper Shortsword",
+        text = {
+          "This Joker gains {C:chips}+#1#{} Chips",
+          "Chips for every destroyed",
+          "{C:attention}playing card{}",
+          "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips){}"
+        }
+      },
       j_star_radiant_joker = {
         name = "Radiant Joker",
         text = {
