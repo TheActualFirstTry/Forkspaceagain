@@ -36,6 +36,13 @@ return {
           "{C:inactive}(Resets after hand scores){}",
         }
       },
+      j_star_astroling = {
+        name = "Astroling",
+        text = {
+          "{C:clubs}Clubs{} and {C:spades}Spades{}",
+          "count as the same suit"
+        }
+      },
       j_star_flash_card = {
         name = "'Flash' Card",
         text = {

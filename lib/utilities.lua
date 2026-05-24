@@ -3,6 +3,7 @@ STAR_UTIL.enabled_jokers = {
   "astro",
   "scrap",
 
+  "astroling",
   "flash_card",
 
   "radiant_joker",
