@@ -11,7 +11,7 @@ SMODS.Joker {
   blueprint_compat = false,
   eternal_compat = true,
   perishable_compat = true,
-  pronouns = "he_him",
+  pronouns = "they_them",
   pools = {
     friends_of_astro = true
   },

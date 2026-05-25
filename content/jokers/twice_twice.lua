@@ -22,16 +22,16 @@ SMODS.Joker {
               return true
             end,
           }))
-            G.E_MANAGER:add_event(Event({
-              trigger = 'after',
-              delay = 0.2,
-              func = function()
-                assert(SMODS.change_base(played, nil, '2'))
-                return true
-              end,
-            }))
-          end
+          G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = 0.2,
+            func = function()
+              assert(SMODS.change_base(played, nil, '2'))
+              return true
+            end,
+          }))
         end
       end
     end
+  end
 }

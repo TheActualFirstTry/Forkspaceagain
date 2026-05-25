@@ -15,6 +15,19 @@ function count_tarots()
   return tarot_counter
 end
 
+if CardPronouns then
+    CardPronouns.Pronoun {
+        colour = CardPronouns.badge_types.he_him.colour,
+        text_colour = CardPronouns.badge_types.he_him.text_colour,
+        pronoun_table = { "He","He" },
+        in_pool = function()
+            return false
+        end,
+        key = "star_michael_pronoun_jackson",
+        classification = "masculine"
+    }
+end
+
 SMODS.ObjectType {
   key = "friends_of_astro",
   default = "j_star_astro",

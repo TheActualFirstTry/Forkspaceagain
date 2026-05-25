@@ -74,6 +74,13 @@ return {
  --       name = "Gut-Punch Bingo",
  --       text = ""
  --     },
+ j_star_michael_jackson = {
+  name = "Michael Jackson's Dead Rotting Corpse",
+text = {
+  "Last played {C:attention}face{} card",
+  "gives {X:mult,C:white}X#1#{} Mult when scored"
+}
+ },
       j_star_copper_shortsword = {
         name = "Copper Shortsword",
         text = {

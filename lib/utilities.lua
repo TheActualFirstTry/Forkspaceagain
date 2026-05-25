@@ -9,6 +9,8 @@ STAR_UTIL.enabled_jokers = {
   "scrap_machete",
   "flash_card",
 
+  "michael_jackson",
+
   "copper_shortsword",
   "radiant_joker",
   "subtle_joker",
