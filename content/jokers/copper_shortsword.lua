@@ -28,13 +28,14 @@ SMODS.Joker {
       for _, removed_card in ipairs(context.removed) do
         destroyed_cards = destroyed_cards + 1
       end
-      card.ability.extra.t_chips = card.ability.extra.t_chips +
-          card.ability.extra.t_chips_gain * destroyed_cards
-      return {
-        message = localize('k_upgrade_ex'),
-        colour = G.C.CHIPS
-      }
-    end
+    SMODS.scale_card(card, {
+                ref_table = card.ability.extra,
+                ref_value = "t_chips",
+                scalar_value = "gain",
+                scalar_table = { gain = (card.ability.extra.t_chips_gain * destroyed_cards) },
+                colour = G.C.CHIPS
+                  })
+                end
     if context.joker_main then
       return {
         chips = card.ability.extra.t_chips
