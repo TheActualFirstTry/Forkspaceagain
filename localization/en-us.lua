@@ -11,22 +11,6 @@ return {
       }
     },
     Joker = {
-      j_star_astro = {
-        name = "Astro",
-        text = {
-          "Friend Jokers each",
-          "give {X:chips,C:white}X#1#{} Chips"
-        }
-      },
-      j_star_vermi = {
-        name = "Vermi",
-        text = {
-          "{X:mult,C:white}X#1#{} Mult during",
-          "{C:attention}context.#2#{}",
-          "Context changes at",
-          "{C:attention}end of round{}"
-        }
-      },
       j_star_scrap = {
         name = "Scrap",
         text = {
@@ -56,6 +40,14 @@ return {
           "This Joker gains {X:chips,C:white}X#1#{} Chips if",
           "played hand contains a {C:attention}Flash{}",
           "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
+        },
+      },
+      j_star_galileo = {
+        name = "Galileo",
+        text = {
+          "Poker hands gain {C:chips}+#1#{}",
+          "extra Chips when",
+          "leveled up"
         }
       },
       j_star_twice_twice = {
@@ -114,20 +106,6 @@ return {
           "a {C:attention}Flash{}"
         }
       },
-      j_star_crystal = {
-        name = "Crystal",
-        text = {
-          "Copies the ability of",
-          "{C:attention}Jokers{} to the left and right"
-        }
-      },
-      j_star_shard = {
-        name = "Shard",
-        text = {
-          "Copies the ability of the",
-          "leftmost and rightmost {C:attention}Jokers{}"
-        }
-      },
     },
     Other = {
     },
@@ -150,7 +128,6 @@ return {
   misc = {
     dictionary = {
       -- Rarities
-      k_friend_badge = "Friend",
       k_star_galaxy = "Galaxy",
 
       -- Credits

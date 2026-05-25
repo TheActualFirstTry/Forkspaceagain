@@ -1,24 +1,3 @@
-G.ARGS.LOC_COLOURS.star_friend = HEX("6bcfdd")
-
--- Friends of Astro pool
-SMODS.Attribute {
-  key = "friends_of_astro"
-}
-
-local pools = {
-  friend = { 
-    default = "friends_of_astro", 
-  badge_text_colour = "star_friend" }
-}
-
-local scmb = SMODS.create_mod_badges
-function SMODS.create_mod_badges(obj, badges)
-  if obj and obj.pools and obj.pools["friends_of_astro"] then
-    badges[#badges + 1] = create_badge(localize("k_friend_badge"), G.ARGS.LOC_COLOURS["star_friend"])
-  end
-  return scmb(obj, badges)
-end
-
 function count_tarots()
   local tarot_counter = 0
   if G.consumeables then
@@ -43,12 +22,6 @@ if CardPronouns then
     classification = "masculine"
   }
 end
-
-SMODS.ObjectType {
-  key = "friends_of_astro",
-  default = "j_star_astro",
-  cards = {}
-}
 
 SMODS.Rarity {
   key = "galaxy",

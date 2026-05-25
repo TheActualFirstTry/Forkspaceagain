@@ -12,12 +12,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pronouns = "they_them",
-  pools = {
-    friends_of_astro = true
-  },
-  attributes = {
-    friends_of_astro = true
-  },
+  
 
   loc_vars = function(self, info_queue, card)
     return {

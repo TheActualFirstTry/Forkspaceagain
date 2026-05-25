@@ -1,6 +1,5 @@
 -- Joker table
 STAR_UTIL.enabled_jokers = {
-  "astro",
   "scrap",
 
   "twice_twice",
@@ -8,6 +7,7 @@ STAR_UTIL.enabled_jokers = {
   "astroling",
   "scrap_machete",
   "flash_card",
+  "galileo",
 
   "michael_jackson",
 
