@@ -34,6 +34,13 @@ return {
           "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
         }
       },
+      j_star_giant_pizza = {
+        name = "Giant Pizza",
+        text = {
+          "{X:mult,C:white}X#2#{} Mult",
+          "{X:mult,C:white}-X1{} Mult per hand played"
+        }
+      },
       j_star_flash_card = {
         name = "'Flash' Card",
         text = {
@@ -45,9 +52,8 @@ return {
       j_star_galileo = {
         name = "Galileo",
         text = {
-          "Poker hands gain {C:chips}+#1#{}",
-          "extra Chips when",
-          "leveled up"
+          "Poker hands gain {C:chips}+#1#{} extra",
+          "Chips when leveled up"
         }
       },
       j_star_twice_twice = {

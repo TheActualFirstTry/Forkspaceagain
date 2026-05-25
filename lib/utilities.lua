@@ -7,6 +7,7 @@ STAR_UTIL.enabled_jokers = {
   "astroling",
   "scrap_machete",
   "flash_card",
+  "giant_pizza",
   "galileo",
 
   "michael_jackson",
