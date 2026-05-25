@@ -66,21 +66,21 @@ return {
           "to {C:attention}2{} after scoring"
         }
       },
---      j_star_god_damn = {
---        name = "God Damn the World",
- --       text = ""
- --     },
- --     j_star_gut_punch = {
- --       name = "Gut-Punch Bingo",
- --       text = ""
- --     },
- j_star_michael_jackson = {
-  name = "Michael Jackson's Dead Rotting Corpse",
-text = {
-  "Last played {C:attention}face{} card",
-  "gives {X:mult,C:white}X#1#{} Mult when scored"
-}
- },
+      --      j_star_god_damn = {
+      --        name = "God Damn the World",
+      --       text = ""
+      --     },
+      --     j_star_gut_punch = {
+      --       name = "Gut-Punch Bingo",
+      --       text = ""
+      --     },
+      j_star_michael_jackson = {
+        name = "Michael Jackson's Dead Rotting Corpse",
+        text = {
+          "Last played {C:attention}face{} card",
+          "gives {X:mult,C:white}X#1#{} Mult when scored"
+        }
+      },
       j_star_copper_shortsword = {
         name = "Copper Shortsword",
         text = {
@@ -108,11 +108,11 @@ text = {
       },
       j_star_the_grace = {
         name = "The Grace",
-       text = {
-        "{X:mult,C:white}X#1#{} Mult if played",
-        "hand contains",
-        "a {C:attention}Flash{}"
-       }
+        text = {
+          "{X:mult,C:white}X#1#{} Mult if played",
+          "hand contains",
+          "a {C:attention}Flash{}"
+        }
       },
       j_star_crystal = {
         name = "Crystal",
@@ -150,6 +150,7 @@ text = {
   misc = {
     dictionary = {
       -- Rarities
+      k_friend_badge = "Friend",
       k_star_galaxy = "Galaxy",
 
       -- Credits
@@ -174,7 +175,6 @@ text = {
     },
     ranks = {
       star_star = "Star"
-    }
+    },
   }
 }
-
