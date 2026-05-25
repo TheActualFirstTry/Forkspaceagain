@@ -29,7 +29,7 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
-    if context.before and context.poker_hands['star_flash'] and not context.blueprint then
+    if context.before and next(context.poker_hands['star_flash']) and not context.blueprint then
       SMODS.scale_card(card, {
         ref_table = card.ability.extra,
         ref_value = "xchips",
