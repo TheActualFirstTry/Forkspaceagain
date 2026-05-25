@@ -3,7 +3,7 @@ SMODS.Joker {
     rarity = 3,
     cost = 16,
     atlas = "jokers",
-    pos = {x=2,y=0},
+    pos = { x = 2, y = 0 },
     calculate = function(self, card, context)
         if not G.jokers then return nil end
         local jkr

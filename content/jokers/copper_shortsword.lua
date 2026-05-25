@@ -12,12 +12,14 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pronouns = "he_him",
-  
+
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-      card.ability.extra.t_chips_gain,
-      card.ability.extra.t_chips
-    } }
+    return {
+      vars = {
+        card.ability.extra.t_chips_gain,
+        card.ability.extra.t_chips
+      }
+    }
   end,
 
   calculate = function(self, card, context)
@@ -27,16 +29,16 @@ SMODS.Joker {
         destroyed_cards = destroyed_cards + 1
       end
       card.ability.extra.t_chips = card.ability.extra.t_chips +
-      card.ability.extra.t_chips_gain * destroyed_cards
+          card.ability.extra.t_chips_gain * destroyed_cards
       return {
         message = localize('k_upgrade_ex'),
         colour = G.C.CHIPS
       }
     end
     if context.joker_main then
-      return{
-      chips = card.ability.extra.t_chips
+      return {
+        chips = card.ability.extra.t_chips
       }
+    end
   end
-end
 }

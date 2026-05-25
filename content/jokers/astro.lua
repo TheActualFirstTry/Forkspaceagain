@@ -13,14 +13,17 @@ SMODS.Joker {
   pronouns = "he_him",
 
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-      card.ability.extra.xchips
-    } }
+    return {
+      vars = {
+        card.ability.extra.xchips
+      }
+    }
   end,
 
-  calculate = function(self, card, context)      
-    if context.other_joker and context.other_joker:has_attribute("friends_of_astro")
-      then return {
+  calculate = function(self, card, context)
+  if context.other_joker and context.other_joker:has_attribute("friends_of_astro")
+    then
+      return {
         xchips = card.ability.extra.xchips
       }
     end

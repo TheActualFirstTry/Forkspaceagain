@@ -8,10 +8,12 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pronouns = "he_him",
-  
+
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-    } }
+    return {
+      vars = {
+      }
+    }
   end,
 
   calculate = function(self, card, context)
@@ -21,10 +23,10 @@ SMODS.Joker {
 
 local smods_smeared_check_ref = SMODS.smeared_check
 function SMODS.smeared_check(card, suit, ...)
-    if next(SMODS.find_card("j_star_astroling")) then
-        if (card.base.suit == 'Clubs' or card.base.suit == 'Spades') and (suit == 'Clubs' or suit == 'Spades') then
-            return true
-        end
+  if next(SMODS.find_card("j_star_astroling")) then
+    if (card.base.suit == 'Clubs' or card.base.suit == 'Spades') and (suit == 'Clubs' or suit == 'Spades') then
+      return true
     end
-    return smods_smeared_check_ref(card, suit, ...)
+  end
+  return smods_smeared_check_ref(card, suit, ...)
 end

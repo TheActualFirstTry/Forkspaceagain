@@ -1,5 +1,5 @@
 SMODS.Joker {
-  key = "the_nuclear_family",
+  key = "the_grace",
   atlas = "jokers",
   pos = { x = 2, y = 5 },
   config = { extra = {
@@ -11,11 +11,13 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pronouns = "he_him",
-  
+
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-      card.ability.extra.xmult
-    } }
+    return {
+      vars = {
+        card.ability.extra.xmult
+      }
+    }
   end,
 
   calculate = function(self, card, context)
@@ -23,6 +25,6 @@ SMODS.Joker {
       return {
         xmult = card.ability.extra.xmult
       }
+    end
   end
-end
 }

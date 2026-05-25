@@ -5,7 +5,7 @@ SMODS.Joker {
   config = { extra = {
     tarot_used = false,
   }
-},
+  },
   rarity = 3,
   cost = 10,
   blueprint_compat = false,
@@ -20,27 +20,29 @@ SMODS.Joker {
   },
 
   loc_vars = function(self, info_queue, card)
-    return { vars = {
+    return {
+      vars = {
 
-    } }
+      }
+    }
   end,
 
   calculate = function(self, card, context)
-        if card.ability.extra.tarot_used == false and context.using_consumeable and context.consumeable.ability.set == 'Tarot' then
-            card.ability.extra.tarot_used = true
-            local eval = function(card)
-                return card.ability.extra.tarot_used
-            end
-            juice_card_until(card, eval, true, 0.1)
-            return {
-                message = "Active!"
-            }
-        end
-        if card.ability.extra.tarot_used == true and context.final_scoring_step then
-          card.ability.extra.tarot_used = false
-            return {
-                balance = true
-            }
-     end
+    if card.ability.extra.tarot_used == false and context.using_consumeable and context.consumeable.ability.set == 'Tarot' then
+      card.ability.extra.tarot_used = true
+      local eval = function(card)
+        return card.ability.extra.tarot_used
+      end
+      juice_card_until(card, eval, true, 0.1)
+      return {
+        message = "Active!"
+      }
+    end
+    if card.ability.extra.tarot_used == true and context.final_scoring_step then
+      card.ability.extra.tarot_used = false
+      return {
+        balance = true
+      }
+    end
   end
 }

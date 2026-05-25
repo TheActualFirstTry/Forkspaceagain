@@ -10,10 +10,12 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pronouns = "he_him",
-  
+
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-    } }
+    return {
+      vars = {
+      }
+    }
   end,
 
   calculate = function(self, card, context)

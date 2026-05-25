@@ -30,10 +30,12 @@ SMODS.Joker {
   } },
 
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-      card.ability.extra.xmult,
-      card.ability.extra.current_context
-    } }
+    return {
+      vars = {
+        card.ability.extra.xmult,
+        card.ability.extra.current_context
+      }
+    }
   end,
 
   set_ability = function(self, card, initial, delay_sprites)
@@ -48,8 +50,8 @@ SMODS.Joker {
     end
 
     -- give xmult
-    if context[card.ability.extra.current_context] and not context.end_of_round 
-    and (context.cardarea == G.play or context.cardarea == G.jokers or context.other_joker) then
+    if context[card.ability.extra.current_context] and not context.end_of_round
+        and (context.cardarea == G.play or context.cardarea == G.jokers or context.other_joker) then
       return { xmult = 2 }
     end
   end

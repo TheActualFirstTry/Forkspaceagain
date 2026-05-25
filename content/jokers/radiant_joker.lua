@@ -11,16 +11,18 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pronouns = "he_him",
-  
+
   loc_vars = function(self, info_queue, card)
-    return { vars = {
-      card.ability.extra.t_mult
-    } }
+    return {
+      vars = {
+        card.ability.extra.t_mult
+      }
+    }
   end,
 
   calculate = function(self, card, context)
     if context.joker_main and context.poker_hands['star_flash'] then
       mult = card.ability.extra.t_mult
+    end
   end
-end
 }

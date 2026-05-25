@@ -3,6 +3,8 @@ STAR_UTIL.enabled_jokers = {
   "astro",
   "scrap",
 
+  "twice_twice",
+   
   "astroling",
   "scrap_machete",
   "flash_card",
@@ -10,7 +12,7 @@ STAR_UTIL.enabled_jokers = {
   "copper_shortsword",
   "radiant_joker",
   "subtle_joker",
-  "the_nuclear_family"
+  "the_grace"
 }
 
 -- Consumables table

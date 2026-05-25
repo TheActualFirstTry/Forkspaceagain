@@ -58,7 +58,23 @@ return {
           "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
         }
       },
-      j_star_copper_shortsword ={
+      j_star_twice_twice = {
+        name = "Twice Twice Paradise",
+        text = {
+          "Played {C:attention}face{} cards",
+          "have their rank changed",
+          "to {C:attention}2{} after scoring"
+        }
+      },
+--      j_star_god_damn = {
+--        name = "God Damn the World",
+ --       text = ""
+ --     },
+ --     j_star_gut_punch = {
+ --       name = "Gut-Punch Bingo",
+ --       text = ""
+ --     },
+      j_star_copper_shortsword = {
         name = "Copper Shortsword",
         text = {
           "This Joker gains {C:chips}+#1#{} Chips",
@@ -83,8 +99,8 @@ return {
           "a {C:attention}Flash{}"
         }
       },
-      j_star_the_nuclear_family = {
-        name = "The Nuclear Family",
+      j_star_the_grace = {
+        name = "The Grace",
        text = {
         "{X:mult,C:white}X#1#{} Mult if played",
         "hand contains",
