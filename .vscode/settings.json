@@ -1,5 +1,8 @@
 {
     "Lua.diagnostics.globals": [
         "local"
+    ],
+    "Lua.diagnostics.disable": [
+        "empty-block"
     ]
 }

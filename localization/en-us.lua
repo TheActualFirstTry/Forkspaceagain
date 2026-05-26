@@ -11,6 +11,13 @@ return {
       }
     },
     Joker = {
+      j_star_astro = {
+        name = "Astro",
+        text = {
+          "Retrigger played {V:1}#1#{} cards,",
+          "suit changes every round"
+        }
+      },
       j_star_scrap = {
         name = "Scrap",
         text = {

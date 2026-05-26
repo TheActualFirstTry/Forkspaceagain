@@ -1,7 +1,7 @@
 SMODS.Joker {
   key = "scrap_machete",
-  atlas = "placeholder",
-  pos = { x = 0, y = 0 },
+  atlas = "jokers",
+  pos = { x = 0, y = 1 },
   config = { extra = {
     t_mult_extra = 6,
     t_mult = 0
