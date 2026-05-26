@@ -11,6 +11,7 @@ STAR_UTIL.enabled_jokers = {
   "galileo",
 
   "michael_jackson",
+  "weathergirl",
 
   "copper_shortsword",
   "radiant_joker",

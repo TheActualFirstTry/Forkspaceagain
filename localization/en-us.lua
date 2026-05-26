@@ -14,10 +14,9 @@ return {
       j_star_scrap = {
         name = "Scrap",
         text = {
-          "When a {C:tarot}Tarot Card{} is used, balance",
-          " {C:chips}Chips{} and {C:mult}Mult{} when calculating",
-          "score for next played hand",
-          "{C:inactive}(Resets after hand scores){}",
+          "When a {C:tarot}Tarot{} card is used,",
+          "balance {C:chips}Chips{} and {C:mult}Mult{}",
+          "for the next hand"
         }
       },
       j_star_astroling = {
@@ -52,8 +51,15 @@ return {
       j_star_galileo = {
         name = "Galileo",
         text = {
-          "Poker hands gain {C:chips}+#1#{} extra",
-          "Chips when leveled up"
+          "Poker hands gain {C:chips}+#1#{} Chips",
+          "when leveled up"
+        }
+      },
+      j_star_weathergirl = {
+        name = "weathergirl",
+        text = {
+          "{C:chips}+125{} Chips,",
+          "{C:attention}Lose all discards{} when {C:attention}Blind{} is selected"
         }
       },
       j_star_twice_twice = {
@@ -83,8 +89,7 @@ return {
         name = "Copper Shortsword",
         text = {
           "This Joker gains {C:chips}+#1#{} Chips",
-          "Chips for every destroyed",
-          "{C:attention}playing card{}",
+          "for every destroyed {C:attention}playing card{}",
           "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips){}"
         }
       },
