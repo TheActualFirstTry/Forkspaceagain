@@ -92,20 +92,19 @@ return {
           "to {C:attention}2{} after scoring"
         }
       },
-      --      j_star_god_damn = {
-      --        name = "God Damn the World",
-      --       text = ""
-      --     },
-      --     j_star_gut_punch = {
-      --       name = "Gut-Punch Bingo",
-      --       text = ""
-      --     },
       j_star_michael_jackson = {
         name = "Michael Jackson's Dead Rotting Corpse",
         text = {
           "Last played {C:attention}face{} card",
           "gives {X:mult,C:white}X#1#{} Mult when scored"
         }
+      },
+      j_star_wall_of_flesh = {
+name = "Wall of Flesh",
+text = {
+  "When {C:attention}Boss Blind{} is selected,",
+  "halve required chips of current {C:Attention}Blind{}"
+}
       },
       j_star_copper_shortsword = {
         name = "Copper Shortsword",

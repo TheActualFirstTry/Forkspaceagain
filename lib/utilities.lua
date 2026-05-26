@@ -15,6 +15,7 @@ STAR_UTIL.enabled_jokers = {
   "weathergirl",
 
   "copper_shortsword",
+  "wall_of_flesh",
   "radiant_joker",
   "subtle_joker",
   "the_grace"
