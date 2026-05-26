@@ -23,6 +23,18 @@ if CardPronouns then
   }
 end
 
+SMODS.Gradient {
+  key = "trans",
+  cycle = 10,
+  colours = {
+    HEX("73CFF4"),
+    HEX("EDAEBF"),
+    HEX("D6D6D6"),
+    HEX("EDAEBF"),
+    HEX("73CFF4"),
+  }
+}
+
 SMODS.Rarity {
   key = "galaxy",
   badge_colour = HEX("B775E0"),

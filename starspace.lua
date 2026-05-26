@@ -12,9 +12,17 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
+-- consumable atlas
 SMODS.Atlas {
   key = "consumables",
   path = "consumables.png",
+  px = 71, py = 95
+}
+
+-- deck atlas
+SMODS.Atlas {
+  key = "decks",
+  path = "decks.png",
   px = 71, py = 95
 }
 

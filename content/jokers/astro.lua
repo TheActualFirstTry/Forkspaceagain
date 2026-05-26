@@ -27,6 +27,7 @@ SMODS.Joker {
   end
 }
 
+-- god bless VanillaRemade
 local function reset_star_castle_card()
   G.GAME.current_round.star_castle_card = { suit = 'Spades' }
   local valid_castle_cards = {}

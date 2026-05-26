@@ -8,6 +8,14 @@ return {
           "one {C:attention}Star{} Card",
           "of each suit in deck"
         }
+      },
+      b_star_estrogen_deck = {
+        name = "Estrogen Deck",
+        text = {
+          "Start run with",
+          "all {C:star_trans}Kings{} replaced",
+          "with {C:star_trans}Queens{}"
+        }
       }
     },
     Joker = {
