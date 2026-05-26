@@ -21,7 +21,7 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
-    if context.joker_main and context.poker_hands['star_flash'] then
+    if context.joker_main and next(context.poker_hands['star_flash']) then
       return {
         mult = card.ability.extra.t_mult
       }
