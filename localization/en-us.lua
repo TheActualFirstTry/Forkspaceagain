@@ -84,6 +84,21 @@ return {
           "{C:attention}Lose all discards{} when {C:attention}Blind{} is selected"
         }
       },
+      j_star_magolor = {
+        name = "Magolor",
+        text = {
+          "Played {C:attention}Lucky{} cards have a",
+          "{C:green}#1# in #2#{} chance to",
+          "give {X:mult,C:white}X#3#{} Mult when scored"
+        }
+      },
+      j_star_marx = {
+        name = "Marx",
+        text = {
+          "This Joker creates a {C:tarot}The Fool{} card",
+          "when any {C:attention}Booster Pack{} is skipped"
+        }
+      },
       j_star_twice_twice = {
         name = "Twice Twice Paradise",
         text = {
@@ -100,11 +115,13 @@ return {
         }
       },
       j_star_wall_of_flesh = {
-name = "Wall of Flesh",
-text = {
-  "When {C:attention}Boss Blind{} is selected,",
-  "halve required chips of current {C:Attention}Blind{}"
-}
+        name = "Wall of Flesh",
+        text = {
+          "{C:mult}+#1#{} Mult if played poker hand is a {C:attention}#4#{}",
+          "{C:mult}#2#{} Mult if played poker hand is not a {C:attention}#4#{}",
+          "Changes on first played hand each round",
+          "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+        }
       },
       j_star_copper_shortsword = {
         name = "Copper Shortsword",

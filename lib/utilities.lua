@@ -14,6 +14,9 @@ STAR_UTIL.enabled_jokers = {
   "michael_jackson",
   "weathergirl",
 
+  "magolor",
+  "marx",
+
   "copper_shortsword",
   "wall_of_flesh",
   "radiant_joker",
