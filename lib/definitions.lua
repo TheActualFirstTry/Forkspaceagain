@@ -58,6 +58,7 @@ STAR_UTIL.credits = {
       "Camostar34",
       "candycane",
       "FirstTry",
+      "Slipstream",
       "Lyre",
       "SDM_0"
     }

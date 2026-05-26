@@ -1,5 +1,5 @@
 SMODS.Back {
-  key = "estrogen_deck",
+  key = "estrogen",
   atlas = "decks",
   pos = { x = 0, y = 0 },
 

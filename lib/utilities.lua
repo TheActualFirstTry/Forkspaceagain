@@ -27,7 +27,8 @@ STAR_UTIL.enabled_consumables = {
 -- Decks table
 STAR_UTIL.enabled_decks = {
   "starstruck",
-  "estrogen_deck"
+  "estrogen",
+  "astral"
 }
 
 -- Poker hands table

@@ -9,12 +9,19 @@ return {
           "of each suit in deck"
         }
       },
-      b_star_estrogen_deck = {
+      b_star_estrogen = {
         name = "Estrogen Deck",
         text = {
           "Start run with",
           "all {C:star_trans}Kings{} replaced",
           "with {C:star_trans}Queens{}"
+        }
+      },
+      b_star_astral = {
+        name = "Astral Deck",
+        text = {
+          "All poker hands",
+          "start at level {C:attention}2{}"
         }
       }
     },
