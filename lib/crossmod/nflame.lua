@@ -1,0 +1,1 @@
+STAR_UTIL.load_items(STAR_UTIL.enabled_crossmod, 'content/jokers/crossmod/neonflame')
