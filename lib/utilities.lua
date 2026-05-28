@@ -21,7 +21,9 @@ STAR_UTIL.enabled_uncommons = {
 STAR_UTIL.enabled_rares = {
   "astro",
   "scrap",
-  "giant_pizza"
+  "giant_pizza",
+  "the_grace",
+  "twice_twice"
 }
 
 STAR_UTIL.enabled_legendaries = {
