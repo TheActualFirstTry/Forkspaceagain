@@ -28,19 +28,6 @@ SMODS.current_mod.badge_text_colour = SMODS.Gradient {
   }
 }
 
-if CardPronouns then
-  CardPronouns.Pronoun {
-    colour = CardPronouns.badge_types.he_him.colour,
-    text_colour = CardPronouns.badge_types.he_him.text_colour,
-    pronoun_table = { "He", "He" },
-    in_pool = function()
-      return false
-    end,
-    key = "star_michael_pronoun_jackson",
-    classification = "masculine"
-  }
-end
-
 SMODS.Gradient {
   key = "rainbow",
   cycle = 20,
@@ -79,8 +66,7 @@ SMODS.ConsumableType {
 
 SMODS.Rarity {
   key = "galaxy",
-  badge_colour = SMODS.Gradient.star_starspace,
-  badge_colour_text = SMODS.Gradient.star_spacestar,
+  badge_colour = SMODS.Gradients.star_starspace,
   default_weight = 0
 }
 

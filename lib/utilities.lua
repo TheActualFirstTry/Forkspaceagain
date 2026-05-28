@@ -1,5 +1,6 @@
 -- Joker table
-STAR_UTIL.enabled_jokers = {
+
+STAR_UTIL.enabled_commons = {
   "astroling",
   "scrap_machete",
   "copper_shortsword",
@@ -7,24 +8,55 @@ STAR_UTIL.enabled_jokers = {
   "michael_jackson",
   "radiant_joker",
   "subtle_joker",
+}
 
+STAR_UTIL.enabled_uncommons = {
   "flash_card",
   "magolor",
   "marx",
   "weathergirl",
-  "wall_of_flesh",
+  "wall_of_flesh"
+}
 
+STAR_UTIL.enabled_rares = {
   "astro",
   "scrap",
-  "giant_pizza",
-  "twice_twice",
-  "the_grace",
+  "giant_pizza"
+}
+
+STAR_UTIL.enabled_legendaries = {
+
+}
+
+STAR_UTIL.enabled_galaxies = {
+  "firsttry"
+}
+
+STAR_UTIL.enabled_crossmod = {
+  neonflame = {
+    "clanker"
+  },
 }
 
 -- Consumables table
 STAR_UTIL.enabled_consumables = {
+  "chaos",
+  "rebirth",
+  "entropy",
+  "ruin",
+  "destruction",
+  "blood",
+  "end",
+  "fate",
+  "order",
+  "insignia",
+  "light",
+  "fractal",
   "creation",
-  "destruction"
+  "genesis",
+  "evolution",
+  "mutation",
+  "ss_starspace"
 }
 
 -- Decks table
@@ -62,6 +94,16 @@ end
 
 -- custom pronoun sets
 if next(SMODS.find_mod("cardpronouns")) then
+  CardPronouns.Pronoun {
+    colour = CardPronouns.badge_types.he_him.colour,
+    text_colour = CardPronouns.badge_types.he_him.text_colour,
+    pronoun_table = { "He", "He" },
+    in_pool = function()
+      return false
+    end,
+    key = "star_michael_pronoun_jackson",
+    classification = "masculine"
+  }
   CardPronouns.Pronoun {
     colour = HEX("80407E"),
     text_colour = G.C.WHITE,

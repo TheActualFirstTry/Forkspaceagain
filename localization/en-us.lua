@@ -155,6 +155,21 @@ return {
           "a {C:attention}Flash{}"
         }
       },
+      j_star_firsttry = {
+        name = "FirstTry",
+        text = {
+          "{X:mult,C:white}X500{} Mult if you",
+          "are breathing {C:attention}manually"
+        }
+      }
+    },
+    Neonflame = {
+j_star_clanker = {
+  name = "Clanker!",
+  text = {
+    "{S:2,C:red,E:1}boo clanker!!!"
+  }
+}
     },
     Other = {
       undiscovered_star_astral = {
@@ -183,6 +198,79 @@ return {
     Voucher = {
     },
     star_astral = {
+      c_star_chaos = {
+        name = "Chaos",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_rebirth = {
+        name = "Rebirth",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_entropy = {
+        name = "Entropy",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_ruin = {
+        name = "Ruin",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_destruction = {
+        name = "Destruction",
+        text = {
+          "{C:star_rainbow}2 of 3{} cards held in hand",
+          "are {E:1,C:red}destroyed{}, rounding up"
+        }
+      },
+      c_star_blood = {
+        name = "Blood",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_end = {
+        name = "End",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_fate = {
+        name = "Fate",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_order = {
+        name = "Order",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_insignia = {
+        name = "Insignia",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_light = {
+        name = "Light",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_fractal = {
+        name = "Fractal",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
       c_star_creation = {
         name = "Creation",
         text = {
@@ -191,14 +279,32 @@ return {
           "{s:0.8,C:star_rainbow}Creation{s:0.8} excluded"
         }
       },
-      c_star_destruction = {
-        name = "Destruction",
+      c_star_genesis = {
+        name = "Genesis",
         text = {
-        "{C:star_rainbow}2 of 3{} cards held in hand",
-        "are {E:1,C:red}destroyed{}, rounding up"
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
         }
+      },
+      c_star_evolution = {
+        name = "Evolution",
+        text = {
+
+        }
+      },
+      c_star_mutation = {
+        name = "Mutation",
+        text = {
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+        }
+      },
+      c_star_ss_starspace = {
+        name = "Starspace",
+        text = {
+          "Creates a {C:star_starspace}Galaxy{} Joker",
+          "{C:inactive}(Must have room)"
       }
     }
+  }
 
   },
   misc = {
