@@ -35,7 +35,7 @@ STAR_UTIL.enabled_galaxies = {
 }
 
 STAR_UTIL.enabled_crossmod = {
-  neonflame = {
+  nflame = {
     "clanker"
   },
 }

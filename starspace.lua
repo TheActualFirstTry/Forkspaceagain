@@ -54,6 +54,6 @@ STAR_UTIL.load_items(STAR_UTIL.enabled_vouchers, 'content/vouchers')
 
 for modid, jokerlist in pairs(STAR_UTIL.enabled_crossmod) do
     if next(SMODS.find_mod(modid)) then
-        STAR_UTIL.load_items(jokerlist, "content/jokers/crossmod" .. modid)
+        STAR_UTIL.load_items(jokerlist, "content/jokers/crossmod/" .. modid)
     end
 end
