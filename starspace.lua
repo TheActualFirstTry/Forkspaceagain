@@ -43,7 +43,7 @@ SMODS.Atlas {
 STAR_UTIL.load_items(STAR_UTIL.enabled_commons, 'content/jokers/common')
 STAR_UTIL.load_items(STAR_UTIL.enabled_uncommons, 'content/jokers/uncommon')
 STAR_UTIL.load_items(STAR_UTIL.enabled_rares, 'content/jokers/rare')
-STAR_UTIL.load_items(STAR_UTIL.enabled_legendary, 'content/jokers/legendary')
+STAR_UTIL.load_items(STAR_UTIL.enabled_legendaries, 'content/jokers/legendary')
 STAR_UTIL.load_items(STAR_UTIL.enabled_galaxies, 'content/jokers/galaxy')
 STAR_UTIL.load_items(STAR_UTIL.enabled_consumables, 'content/consumables')
 STAR_UTIL.load_items(STAR_UTIL.enabled_decks, 'content/decks')
