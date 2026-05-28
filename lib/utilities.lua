@@ -1,15 +1,12 @@
 -- Joker table
 STAR_UTIL.enabled_jokers = {
-  "astro",
-  "scrap",
-
-  "radiant_joker",
-  "subtle_joker",
   "astroling",
   "scrap_machete",
   "copper_shortsword",
   "galileo",
   "michael_jackson",
+  "radiant_joker",
+  "subtle_joker",
 
   "flash_card",
   "magolor",
@@ -17,14 +14,17 @@ STAR_UTIL.enabled_jokers = {
   "weathergirl",
   "wall_of_flesh",
 
+  "astro",
+  "scrap",
+  "giant_pizza",
   "twice_twice",
   "the_grace",
-  "giant_pizza",
 }
 
 -- Consumables table
 STAR_UTIL.enabled_consumables = {
-  "astral_card"
+  "creation",
+  "destruction"
 }
 
 -- Decks table

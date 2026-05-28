@@ -48,10 +48,7 @@ SMODS.Consumable {
         delay(0.6)
     end,
     can_use = function(self, card)
-        if (#G.consumeables.cards < G.consumeables.config.card_limit or card.area == G.consumeables) and
-            G.GAME.last_astral_card and
-            G.GAME.last_astral_card ~= 'c_star_creation' then
-            return true
-        end
+        return (#G.consumeables.cards < G.consumeables.config.card_limit or card.area == G.consumeables) and
+            G.GAME.last_astral_card and G.GAME.last_astral_card ~= 'c_star_creation'
     end
 }
