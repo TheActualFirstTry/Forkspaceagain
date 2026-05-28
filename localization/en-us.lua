@@ -161,15 +161,16 @@ return {
           "{X:mult,C:white}X500{} Mult if you",
           "are breathing {C:attention}manually"
         }
+      },
+      j_star_clanker = {
+        name = "Clanker!",
+        text = {
+          "Played cards with",
+          "{C:spade}Spade{} suit give {C:chips}+#2#{} Chips",
+          "for each held {C:nflame_silicon}Silicon{} joker",
+          "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
+        }
       }
-    },
-    Neonflame = {
-j_star_clanker = {
-  name = "Clanker!",
-  text = {
-    "{S:2,C:red,E:1}boo clanker!!!"
-  }
-}
     },
     Other = {
       undiscovered_star_astral = {
@@ -302,9 +303,9 @@ j_star_clanker = {
         text = {
           "Creates a {C:star_starspace}Galaxy{} Joker",
           "{C:inactive}(Must have room)"
+        }
       }
     }
-  }
 
   },
   misc = {
