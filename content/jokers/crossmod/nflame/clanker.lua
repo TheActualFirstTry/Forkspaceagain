@@ -3,7 +3,7 @@ SMODS.Joker {
   atlas = "placeholder",
   pos = { x = 0, y = 0 },
   config = { extra = {
-    t_chips = 15,
+    t_chips = 0,
     t_chips_gain = 15
   } },
   rarity = 2,
@@ -17,7 +17,7 @@ SMODS.Joker {
   loc_vars = function(self, info_queue, card)
     return {
       vars = {
-        card.ability.extra.t_chips * (G.nflame_get_silicontotal() - 1),
+        card.ability.extra.t_chips * G.nflame_get_silicontotal(),
         card.ability.extra.t_chips_gain
       }
     }
