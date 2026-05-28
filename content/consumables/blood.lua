@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = '',
+    key = 'blood',
     set = 'star_astral',
     atlas = 'placeholder',
     pos = { x = 2, y = 1 },

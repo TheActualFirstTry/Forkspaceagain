@@ -1,7 +1,8 @@
 SMODS.Joker {
     key = "firsttry",
-    atlas = "placeholder",
+    atlas = "galaxy_jokers",
     pos = { x = 0, y = 0 },
+    soul_pos = { x = 1, y = 0},
     config = { extra = {
     } },
     rarity = "star_galaxy",

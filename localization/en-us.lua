@@ -167,7 +167,7 @@ return {
         text = {
           "Played cards with",
           "{C:spade}Spade{} suit give {C:chips}+#2#{} Chips",
-          "for each held {C:nflame_silicon}Silicon{} joker",
+          "for each held {C:nflame_silicon}Silicon{} card",
           "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)"
         }
       }

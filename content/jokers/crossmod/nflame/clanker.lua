@@ -18,7 +18,9 @@ SMODS.Joker {
 
   calculate = function(self, card, context)
     if context.individual and context.cardarea == G.play and context.other_card:is_suit("Spades") then
-      chips = card.ability.extra.t_chips * G.nflame_get_silicontotal(context)
+      return {
+        chips = card.ability.extra.t_chips * G.nflame_get_silicontotal(context)
+      }
     end
   end
 }
