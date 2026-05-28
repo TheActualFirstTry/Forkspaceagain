@@ -1,11 +1,8 @@
 SMODS.Joker {
   key = "giant_pizza",
-  atlas = "placeholder",
-  pos = { x = 0, y = 0 },
-  config = { extra = {
-    xmult_loss = 1,
-    xmult = 8
-  } },
+  atlas = "jokers",
+  pos = { x = 2, y = 6 },
+  config = { extra = { xmult_loss = 1, xmult = 8 } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -14,12 +11,7 @@ SMODS.Joker {
   pronouns = "it_its",
 
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-        card.ability.extra.xmult_loss,
-        card.ability.extra.xmult
-      }
-    }
+    return { vars = { card.ability.extra.xmult_loss, card.ability.extra.xmult } }
   end,
 
   calculate = function(self, card, context)

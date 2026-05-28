@@ -10,6 +10,24 @@ function count_tarots()
   return tarot_counter
 end
 
+SMODS.current_mod.badge_colour = SMODS.Gradient {
+  key = "starspace",
+  cycle = 5,
+  colours = {
+    HEX("13363B"),
+    HEX("1D3174")
+  }
+}
+
+SMODS.current_mod.badge_text_colour = SMODS.Gradient {
+  key = "spacestar",
+  cycle = 5,
+  colours = {
+    HEX("C6D1D0"),
+    HEX("FFFFFF")
+  }
+}
+
 if CardPronouns then
   CardPronouns.Pronoun {
     colour = CardPronouns.badge_types.he_him.colour,
@@ -24,8 +42,22 @@ if CardPronouns then
 end
 
 SMODS.Gradient {
+  key = "rainbow",
+  cycle = 20,
+  colours = {
+    HEX("FF3F3F"),
+    HEX("FFA42E"),
+    HEX("D6D300"),
+    HEX("38FF48"),
+    HEX("3B90FF"),
+    HEX("B639FF"),
+  },
+}
+
+SMODS.Gradient {
   key = "trans",
   cycle = 10,
+  interpolation = 'trig',
   colours = {
     HEX("73CFF4"),
     HEX("EDAEBF"),
@@ -35,9 +67,20 @@ SMODS.Gradient {
   }
 }
 
+SMODS.ConsumableType {
+    key = 'star_astral',
+    default = 'c_star_creation',
+    collection = 'b_star_astral_cards',
+    primary_colour = SMODS.Gradients.star_rainbow,
+    secondary_colour = SMODS.Gradients.star_rainbow,
+    collection_rows = { 5, 6 },
+    shop_rate = 0,
+}
+
 SMODS.Rarity {
   key = "galaxy",
-  badge_colour = HEX("B775E0"),
+  badge_colour = SMODS.Gradient.star_starspace,
+  badge_colour_text = SMODS.Gradient.star_spacestar,
   default_weight = 0
 }
 
@@ -70,6 +113,7 @@ STAR_UTIL.credits = {
       "Meta",
       "ThunderEdge",
       "wingedcatgirl",
+      "jamirror",
       "CodeRevo",
       "GhostSalt",
       "candycane"

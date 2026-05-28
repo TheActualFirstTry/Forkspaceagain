@@ -80,7 +80,7 @@ return {
       j_star_weathergirl = {
         name = "weathergirl",
         text = {
-          "{C:chips}+125{} Chips,",
+          "{C:chips}+#1#{} Chips,",
           "{C:attention}Lose all discards{} when {C:attention}Blind{} is selected"
         }
       },
@@ -119,7 +119,7 @@ return {
         text = {
           "{C:mult}+#1#{} Mult if played poker hand is a {C:attention}#4#{}",
           "{C:mult}#2#{} Mult if played poker hand is not a {C:attention}#4#{}",
-          "Changes on first played hand each round",
+          "Targets first played poker hand of the round",
           "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
         }
       },
@@ -157,6 +157,15 @@ return {
       },
     },
     Other = {
+      undiscovered_star_astral = {
+        name = "Not Discovered",
+        text = {
+          "Purchase or use",
+          "this card in an",
+          "unseeded run to",
+          "learn what it does",
+        },
+      },
     },
     Planet = {
       c_star_planet_popstar = {
@@ -173,9 +182,31 @@ return {
     },
     Voucher = {
     },
+    star_astral = {
+      c_star_creation = {
+        name = "Creation",
+        text = {
+          "Creates the last {C:star_rainbow}Astral{} Card",
+          "used during this run",
+          "{s:0.8,C:star_rainbow}Creation{s:0.8} excluded"
+        }
+      },
+      c_star_destruction = {
+        name = "Destruction",
+        text = {
+        "{C:star_rainbow}2 of 3{} cards held in hand",
+        "are {E:1,C:red}destroyed{}, rounding up"
+        }
+      }
+    }
+
   },
   misc = {
     dictionary = {
+      -- Astral Cards
+      k_star_astral = "Astral Card",
+      b_star_astral_cards = "Astral Cards",
+
       -- Rarities
       k_star_galaxy = "Galaxy",
 
@@ -187,6 +218,7 @@ return {
     },
     labels = {
       k_star_galaxy = "Galaxy",
+      star_astral = "Astral Card"
     },
     poker_hands = {
       star_flash = "Flash",

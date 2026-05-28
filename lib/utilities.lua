@@ -3,29 +3,28 @@ STAR_UTIL.enabled_jokers = {
   "astro",
   "scrap",
 
-  "twice_twice",
-   
-  "astroling",
-  "scrap_machete",
-  "flash_card",
-  "giant_pizza",
-  "galileo",
-
-  "michael_jackson",
-  "weathergirl",
-
-  "magolor",
-  "marx",
-
-  "copper_shortsword",
-  "wall_of_flesh",
   "radiant_joker",
   "subtle_joker",
-  "the_grace"
+  "astroling",
+  "scrap_machete",
+  "copper_shortsword",
+  "galileo",
+  "michael_jackson",
+
+  "flash_card",
+  "magolor",
+  "marx",
+  "weathergirl",
+  "wall_of_flesh",
+
+  "twice_twice",
+  "the_grace",
+  "giant_pizza",
 }
 
 -- Consumables table
 STAR_UTIL.enabled_consumables = {
+  "astral_card"
 }
 
 -- Decks table
