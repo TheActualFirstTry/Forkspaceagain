@@ -165,7 +165,7 @@ return {
       j_star_selfie = {
         name = "Selfie",
         text = {
-          "Played {C:attention}face{} cards in a {C:attention}Flash{} give",
+          "Played {C:attention}face{} cards in a {C:attention}#2#{} give",
           "{X:chips,C:white}X#1#{} Chips when scored"
         }
       },
