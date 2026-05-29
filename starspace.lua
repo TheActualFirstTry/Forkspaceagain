@@ -26,10 +26,15 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
--- joker atlas
+-- main joker atlas
 SMODS.Atlas {
   key = "jokers",
   path = "jokers.png",
+  px = 71, py = 95
+}
+SMODS.Atlas {
+  key = "galaxy_jokers",
+  path = "galaxy_jokers.png",
   px = 71, py = 95
 }
 

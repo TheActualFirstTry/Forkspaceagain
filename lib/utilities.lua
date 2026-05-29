@@ -21,17 +21,18 @@ STAR_UTIL.enabled_uncommons = {
 STAR_UTIL.enabled_rares = {
   "astro",
   "scrap",
+  "selfie",
   "giant_pizza",
   "the_grace",
   "twice_twice"
 }
 
 STAR_UTIL.enabled_legendaries = {
-
+-- "zenith"
 }
 
 STAR_UTIL.enabled_galaxies = {
-  "firsttry"
+-- "firsttry"
 }
 
 STAR_UTIL.enabled_crossmod = {
@@ -42,7 +43,7 @@ STAR_UTIL.enabled_crossmod = {
 
 -- Consumables table
 STAR_UTIL.enabled_consumables = {
-  "chaos",
+--[[   "chaos",
   "rebirth",
   "entropy",
   "ruin",
@@ -58,7 +59,7 @@ STAR_UTIL.enabled_consumables = {
   "genesis",
   "evolution",
   "mutation",
-  "ss_starspace"
+  "ss_starspace" ]]
 }
 
 -- Decks table

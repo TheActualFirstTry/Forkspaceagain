@@ -21,27 +21,25 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
-    if context.skipping_booster then
+    if context.skipping_booster and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+      G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
       G.E_MANAGER:add_event(Event({
-        func = function()
-          SMODS.add_card {
-            set = 'Tarot',
-            key = 'c_fool'
-          }
+        func = (function()
+          G.E_MANAGER:add_event(Event({
+            func = function()
+              SMODS.add_card {
+                set = 'Tarot',
+                key = 'c_fool'
+              }
+              G.GAME.consumeable_buffer = 0
+              return true
+            end
+          }))
+          SMODS.calculate_effect({ message = "Fool!", colour = G.C.PURPLE },
+            context.blueprint_card or card)
           return true
-        end,
+        end)
       }))
-      G.E_MANAGER:add_event(Event({
-        func = function()
-          card:juice_up(0.3, 0.5)
-          play_sound('timpani')
-          return true
-        end
-      }))
-      return {
-        message = "Haha! See you later!",
-        colour = G.C.PURPLE
-      }
     end
   end
 }
