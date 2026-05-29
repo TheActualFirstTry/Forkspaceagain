@@ -28,8 +28,10 @@ SMODS.Joker {
     end
     if context.setting_blind and not context.blueprint then
       G.E_MANAGER:add_event(Event({
+        trigger = 'before',
         func = function()
           ease_discard(-G.GAME.current_round.discards_left, nil, true)
+          return true
         end
       }))
       SMODS.calculate_effect(

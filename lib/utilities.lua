@@ -28,7 +28,7 @@ STAR_UTIL.enabled_rares = {
 }
 
 STAR_UTIL.enabled_legendaries = {
-
+  "zenith"
 }
 
 STAR_UTIL.enabled_galaxies = {

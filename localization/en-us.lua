@@ -96,7 +96,8 @@ return {
         name = "Marx",
         text = {
           "This Joker creates a {C:tarot}The Fool{} card",
-          "when any {C:attention}Booster Pack{} is skipped"
+          "when any {C:attention}Booster Pack{} is skipped",
+          "{C:inactive}(Must have room)"
         }
       },
       j_star_twice_twice = {
@@ -158,8 +159,10 @@ return {
       j_star_firsttry = {
         name = "FirstTry",
         text = {
-          "{X:mult,C:white}X500{} Mult if you",
-          "are breathing {C:attention}manually"
+          "Every {C:attention}#1#{} triggered {C:star_rainbow}Emblems{},",
+          "create a random {S:1.5,E:1,C:dark_edition}rare consumable{}",
+          "{C:inactive}(Currently #2#/#1#)",
+          "{C:inactive,S:0.8}this does not function yet"
         }
       },
       j_star_selfie = {
@@ -167,6 +170,18 @@ return {
         text = {
           "Played {C:attention}face{} cards in a {C:attention}#2#{} give",
           "{X:chips,C:white}X#1#{} Chips when scored"
+        }
+      },
+      j_star_zenith = {
+        name = "Zenith",
+        text = {
+          "The Zenith is a {C:attention}Hardmode{}, post-{C:attention}Moon Lord melee weapon{}.",
+          "When used, it rapidly fires fast-moving sword sprites towards the cursor in an arc returning to the player.",
+          "The sword sprites can pass through {C:attention}blocks{}, pierce {C:attention}enemies{} infinitely,",
+          "home in on nearby enemies, and create visual trails while traveling.",
+          "The sword sprites have {C:attention}varying appearances{}, which function identically and have the same hitbox size.",
+          "The Zenith has a base 14% {C:attention}critical strike chance{} as opposed to the usual 4%.",
+          "{C:inactive,S:0.8}this does not function yet"
         }
       },
       j_star_clanker = {
