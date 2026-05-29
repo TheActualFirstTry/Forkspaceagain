@@ -12,6 +12,5 @@
 		"Steamodded (>=1.0.0~BETA-1016c)"
 	],
 	"conflicts": [
-		"Cryptid (>=0.0) (<<2~)"
 	]
 }
