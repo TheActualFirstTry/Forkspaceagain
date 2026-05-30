@@ -1,8 +1,9 @@
 SMODS.Consumable {
     key = 'ss_starspace',
-    set = 'star_astral',
-    atlas = 'placeholder',
-    pos = { x = 2, y = 1 },
+    set = 'Spectral',
+    atlas = 'consumables',
+    pos = { x = 1, y = 2 },
+    soul_pos = { x = 2, y = 2 },
     hidden = true,
 
     loc_vars = function(self, info_queue, card)

@@ -1,8 +1,8 @@
 SMODS.Consumable {
     key = 'destruction',
     set = 'star_astral',
-    atlas = 'placeholder',
-    pos = { x = 2, y = 1 },
+    atlas = 'astral_cards',
+    pos = { x = 0, y = 1 },
 
     use = function(self, card, area, copier)
         local destroy = math.ceil((G.hand.config.card_limit) / 2)

@@ -60,7 +60,7 @@ SMODS.ConsumableType {
     collection = 'b_star_astral_cards',
     primary_colour = SMODS.Gradients.star_rainbow,
     secondary_colour = SMODS.Gradients.star_rainbow,
-    collection_rows = { 5, 6 },
+    collection_rows = { 4, 4 },
     shop_rate = 0,
 }
 

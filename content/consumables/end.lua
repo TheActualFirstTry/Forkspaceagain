@@ -1,7 +1,7 @@
 SMODS.Consumable {
     key = 'end',
     set = 'star_astral',
-    atlas = 'placeholder',
+    atlas = 'astral_cards',
     pos = { x = 2, y = 1 },
 
     loc_vars = function(self, info_queue, card)

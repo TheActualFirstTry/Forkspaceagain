@@ -1,8 +1,8 @@
 SMODS.Consumable {
     key = 'blood',
     set = 'star_astral',
-    atlas = 'placeholder',
-    pos = { x = 2, y = 1 },
+    atlas = 'astral_cards',
+    pos = { x = 1, y = 1 },
 
     loc_vars = function(self, info_queue, card)
         return { vars = {  } }

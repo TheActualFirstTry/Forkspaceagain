@@ -19,6 +19,13 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
+-- astral card atlas
+SMODS.Atlas {
+  key = "astral_cards",
+  path = "astral_cards.png",
+  px = 71, py = 95
+}
+
 -- deck atlas
 SMODS.Atlas {
   key = "decks",
