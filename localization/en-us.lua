@@ -159,7 +159,8 @@ return {
       j_star_firsttry = {
         name = "FirstTry",
         text = {
-
+          "Every {C:attention}#2#{C:inactive}[#1#]{} used {C:star_rainbow}Astral{} cards",
+          "create a random {C:white,X:star_rainbow}Rare#3#Consumable",
         }
       },
       j_star_selfie = {
