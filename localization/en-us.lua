@@ -229,25 +229,25 @@ return {
       c_star_chaos = {
         name = "Chaos",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_rebirth = {
         name = "Rebirth",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_entropy = {
         name = "Entropy",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_ruin = {
         name = "Ruin",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_destruction = {
@@ -260,43 +260,43 @@ return {
       c_star_blood = {
         name = "Blood",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_end = {
         name = "End",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_fate = {
         name = "Fate",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_order = {
         name = "Order",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_insignia = {
         name = "Insignia",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_light = {
         name = "Light",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_fractal = {
         name = "Fractal",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_creation = {
@@ -310,19 +310,19 @@ return {
       c_star_genesis = {
         name = "Genesis",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_evolution = {
         name = "Evolution",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
       c_star_mutation = {
         name = "Mutation",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
+          "{S:1.5,C:star_rainbow,E:1}#1#"
         }
       },
     }

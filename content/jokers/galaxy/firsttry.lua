@@ -45,7 +45,7 @@ SMODS.Joker {
             end
             return newpool
         end
-    } 
+    }
     if (#G.consumeables.cards < G.consumeables.config.card_limit) then
                     if key then SMODS.add_card{key = key} end
                     card.ability.immutable.astral = 0

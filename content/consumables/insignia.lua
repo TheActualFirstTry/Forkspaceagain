@@ -5,7 +5,7 @@ SMODS.Consumable {
     pos = { x = 1, y = 2 },
 
     loc_vars = function(self, info_queue, card)
-        return { vars = {  } }
+        return { vars = { G.GAME.c_star_insignia_used } }
     end,
 
     use = function(self, card, area, copier)
@@ -13,6 +13,6 @@ SMODS.Consumable {
     end,
 
     can_use = function(self, card)
-
+        return true
     end
 }
