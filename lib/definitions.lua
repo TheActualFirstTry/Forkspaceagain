@@ -40,6 +40,18 @@ SMODS.Gradient {
     HEX("B639FF"),
   },
 }
+SMODS.Gradient {
+  key = "fast_rainbow",
+  cycle = 1,
+  colours = {
+    HEX("FF3F3F"),
+    HEX("FFA42E"),
+    HEX("D6D300"),
+    HEX("38FF48"),
+    HEX("3B90FF"),
+    HEX("B639FF"),
+  },
+}
 
 SMODS.Gradient {
   key = "trans",
