@@ -4,8 +4,7 @@ SMODS.Joker {
     pos = { x = 0, y = 0 },
     soul_pos = { x = 1, y = 0 },
     config = { extra = {
-        astral_count = 0,
-        reset_meter = 4
+
     } },
     rarity = "star_galaxy",
     cost = 50,
@@ -16,7 +15,7 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         return {
-            vars = { card.ability.extra.reset_meter, card.ability.extra.astral_count } }
+            vars = {  } }
     end,
 
     calculate = function(self, card, context)

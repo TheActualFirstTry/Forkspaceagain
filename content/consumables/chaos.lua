@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = '',
+    key = 'chaos',
     set = 'star_astral',
     atlas = 'astral_cards',
     pos = { x = 0, y = 0 },

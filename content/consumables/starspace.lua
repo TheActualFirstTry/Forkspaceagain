@@ -1,5 +1,5 @@
 SMODS.Consumable {
-    key = 'ss_starspace',
+    key = 'starspace',
     set = 'Spectral',
     atlas = 'consumables',
     pos = { x = 1, y = 2 },

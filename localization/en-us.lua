@@ -159,10 +159,7 @@ return {
       j_star_firsttry = {
         name = "FirstTry",
         text = {
-          "Every {C:attention}#1#{} triggered {C:star_rainbow}Emblems{},",
-          "create a random {S:1.5,E:1,C:dark_edition}rare consumable{}",
-          "{C:inactive}(Currently #2#/#1#)",
-          "{C:inactive,S:0.8}this does not function yet"
+
         }
       },
       j_star_selfie = {
@@ -217,6 +214,13 @@ return {
       }
     },
     Spectral = {
+      c_star_starspace = {
+        name = "Starspace",
+        text = {
+          "Creates a {C:star_starspace}Galaxy{} Joker",
+          "{C:inactive}(Must have room)"
+        }
+      }
     },
     Voucher = {
     },
@@ -311,7 +315,7 @@ return {
       c_star_evolution = {
         name = "Evolution",
         text = {
-
+          "{S:1.5,C:star_rainbow,E:1}Unfinished!"
         }
       },
       c_star_mutation = {
@@ -320,13 +324,6 @@ return {
           "{S:1.5,C:star_rainbow,E:1}Unfinished!"
         }
       },
-      c_star_ss_starspace = {
-        name = "Starspace",
-        text = {
-          "Creates a {C:star_starspace}Galaxy{} Joker",
-          "{C:inactive}(Must have room)"
-        }
-      }
     }
 
   },

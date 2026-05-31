@@ -32,7 +32,7 @@ STAR_UTIL.enabled_legendaries = {
 }
 
 STAR_UTIL.enabled_galaxies = {
-  -- "firsttry"
+  "firsttry"
 }
 
 STAR_UTIL.enabled_crossmod = {
@@ -59,7 +59,7 @@ STAR_UTIL.enabled_consumables = {
   "genesis",
   "evolution",
   "mutation",
-  "ss_starspace"
+  "starspace"
 }
 
 -- Decks table
