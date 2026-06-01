@@ -1,5 +1,5 @@
 SMODS.Booster {
-    key = "space_normal_1",
+    key = "space_normal_2",
     weight = 1,
     kind = 'star_space',
     cost = 4,

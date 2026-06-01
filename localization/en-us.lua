@@ -371,6 +371,16 @@ return {
     },
 
     dictionary = {
+
+      k_star_space_normal = {
+        name = "Space Pack",
+        text = {
+          "Select {C:attention}#1#{} of up to",
+          "{C:attention}#2#{C:star_astral} Astral{} cards to",
+          "be collected or something",
+        }
+      },
+
       -- Astral Cards
       k_star_astral = "Astral Card",
       b_star_astral_cards = "Astral Cards",
