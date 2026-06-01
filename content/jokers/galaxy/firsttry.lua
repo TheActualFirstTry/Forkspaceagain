@@ -27,7 +27,7 @@ SMODS.Joker {
                     ref_value = "astral",
                     scalar_value = "astral_inc",
                     scaling_message = {
-                        message = "Charged",
+                        message = (card.ability.immutable.astral + card.ability.immutable.astral_inc) .. "/" .. card.ability.immutable.astral_max,
                         colour = SMODS.Gradients["star_fast_rainbow"],
                     },
                 })
@@ -38,13 +38,24 @@ SMODS.Joker {
                 end
                 local random_key = pseudorandom_element(pool, "random_rare_consumeable")
                 if (#G.consumeables.cards < G.consumeables.config.card_limit) then
-                    if random_key then SMODS.add_card{key = random_key} end
+                    if random_key then
+                        G.E_MANAGER:add_event(Event({
+                        trigger = 'before',
+                        delay = 0.8,
+                        func = (function()
+                        SMODS.calculate_effect({message = "Charged!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
+                        return true
+                    end)
+                }))
+                        G.E_MANAGER:add_event(Event({
+                        func = (function()
+                        SMODS.calculate_effect({message = "Busted!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
+                        SMODS.add_card{key = random_key, skip_materialize = false}
+                        return true
+                    end)
+                }))
+                    end
                     card.ability.immutable.astral = 0
-                return {
-                    message = "Busted!",
-                    colour = SMODS.Gradients["star_fast_rainbow"],
-                   card = card
-                }
             end
         end
     end
