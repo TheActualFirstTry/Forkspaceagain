@@ -22,6 +22,8 @@ STAR_UTIL.enabled_uncommons = {
 STAR_UTIL.enabled_rares = {
   "astro",
   "scrap",
+  "crystal",
+  "shard",
   "selfie",
   "giant_pizza",
   "the_grace",
@@ -86,6 +88,10 @@ STAR_UTIL.enabled_quips = {
 
 -- Vouchers table
 STAR_UTIL.enabled_vouchers = {
+}
+
+STAR_UTIL.enabled_achievements = {
+  "your_pick"
 }
 
 -- custom colors

@@ -26,6 +26,12 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
+SMODS.Atlas {
+  key = "star_achievements",
+  path = "star_achievements.png",
+  px = 66, py = 66
+}
+
 -- deck atlas
 SMODS.Atlas {
   key = "decks",
@@ -63,6 +69,7 @@ STAR_UTIL.load_items(STAR_UTIL.enabled_hands, 'content/pokerhands')
 STAR_UTIL.load_items(STAR_UTIL.enabled_modifiers, 'content/modifiers')
 STAR_UTIL.load_items(STAR_UTIL.enabled_quips, 'content/quips')
 STAR_UTIL.load_items(STAR_UTIL.enabled_vouchers, 'content/vouchers')
+STAR_UTIL.load_items(STAR_UTIL.enabled_achievements, 'content/achievements')
 
 for modid, jokerlist in pairs(STAR_UTIL.enabled_crossmod) do
     if next(SMODS.find_mod(modid)) then

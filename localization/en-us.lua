@@ -39,8 +39,14 @@ return {
           "When a {C:tarot}Tarot{} card is used,",
           "balance {C:chips}Chips{} and {C:mult}Mult{}",
           "for the next hand"
-        }
+        },
       },
+        j_star_crystal = {
+          name = "Crystal"
+        },
+        j_star_shard = {
+          name = "Shard"
+        },
       j_star_astroling = {
         name = "Astroling",
         text = {
@@ -337,6 +343,13 @@ return {
 
   },
   misc = {
+    achievement_names = {
+      ach_star_your_pick = "Take Your Pick",
+    },
+    achievement_descriptions = {
+      ach_entr_your_pick = "Own Crystal and Shard simultaneously",
+    },
+
     dictionary = {
       -- Astral Cards
       k_star_astral = "Astral Card",
