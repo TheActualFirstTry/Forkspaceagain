@@ -21,7 +21,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' then
+        if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' and G.GAME[context.other_consumeable.config.center.key .. "_used"] then
             return {
                 chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"],
                 message_card = context.other_consumeable
