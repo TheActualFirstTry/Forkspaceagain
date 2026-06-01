@@ -32,22 +32,13 @@ SMODS.Joker {
                     },
                 })
                 if card.ability.immutable.astral >= card.ability.immutable.astral_max then
-            local key = SMODS.poll_object{
-        pool = SMODS.Consumable.legendaries,
-        seed = "astroseed",
-        filter = function(pool)
-            local newpool = {}
-            for _,item in ipairs(pool) do
-                local center = G.P_CENTERS[item.key]
-                if center and center.key ~= "c_star_starspace" then
-                    newpool[#newpool+1] = item
+            local pool = {}
+                    for _,v in ipairs(G.P_CENTER_POOLS.Consumeables) do
+                      if v.hidden and v.key ~= "c_star_starspace" then pool[#pool+1] = v.key end
                 end
-            end
-            return newpool
-        end
-    }
-    if (#G.consumeables.cards < G.consumeables.config.card_limit) then
-                    if key then SMODS.add_card{key = key} end
+                local random_key = pseudorandom_element(pool, "random_rare_consumeable")
+                if (#G.consumeables.cards < G.consumeables.config.card_limit) then
+                    if random_key then SMODS.add_card{key = random_key} end
                     card.ability.immutable.astral = 0
                 return {
                     message = "Busted!",
