@@ -13,7 +13,6 @@ SMODS.Joker {
   perishable_compat = true,
   pronouns = "he_him",
   
-
   loc_vars = function(self, info_queue, card)
     return {
       vars = {

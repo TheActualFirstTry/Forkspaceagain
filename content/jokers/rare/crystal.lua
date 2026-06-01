@@ -1,23 +1,29 @@
 SMODS.Joker {
-  key = "crystal",
-  atlas = "jokers",
-  pos = { x = 2, y = 0 },
-  config = { extra = {
-  } },
-  rarity = 3,
-  cost = 10,
-  blueprint_compat = true,
-  eternal_compat = true,
-  perishable_compat = false,
-  pronouns = "she_her",
+    key = "crystal",
+    atlas = "jokers",
+    pos = { x = 2, y = 0 },
+    config = { extra = {
+    } },
+    rarity = 3,
+    cost = 10,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = false,
+    pronouns = "she_her",
 
-  loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-      }
-    }
-  end,
+    add_to_deck = function(self, card, from_debuff)
+        if next(SMODS.find_card("j_star_shard")) then
+            check_for_unlock { type = "joker_set", set = "ach_star_yuri" }
+        end
+    end,
 
-  calculate = function(self, card, context)
-  end
+    loc_vars = function(self, info_queue, card)
+        return {
+            vars = {
+            }
+        }
+    end,
+
+    calculate = function(self, card, context)
+    end
 }

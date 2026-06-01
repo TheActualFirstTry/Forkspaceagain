@@ -1,6 +1,7 @@
 SMODS.current_mod.calculate = function(self, context)
   if context.using_consumeable and context.consumeable.ability.set == 'star_astral' then
-    G.GAME[context.consumeable.config.center.key.."_used"] = (G.GAME[context.consumeable.config.center.key.."_used"] or 0) + 1
+    G.GAME[context.consumeable.config.center.key .. "_used"] = (G.GAME[context.consumeable.config.center.key .. "_used"] or 0) +
+    1
   end
 end
 
@@ -16,47 +17,10 @@ function count_tarots()
   return tarot_counter
 end
 
-SMODS.current_mod.badge_colour = SMODS.Gradient {
-  key = "starspace",
-  cycle = 5,
-  colours = {
-    HEX("13363B"),
-    HEX("1D3174")
-  }
-}
-
-SMODS.current_mod.badge_text_colour = SMODS.Gradient {
-  key = "spacestar",
-  cycle = 5,
-  colours = {
-    HEX("C6D1D0"),
-    HEX("FFFFFF")
-  }
-}
-
 SMODS.Gradient {
-  key = "rainbow",
-  cycle = 20,
-  colours = {
-    HEX("FF3F3F"),
-    HEX("FFA42E"),
-    HEX("D6D300"),
-    HEX("38FF48"),
-    HEX("3B90FF"),
-    HEX("B639FF"),
-  },
-}
-SMODS.Gradient {
-  key = "fast_rainbow",
+  key = "astral",
   cycle = 1,
-  colours = {
-    HEX("FF3F3F"),
-    HEX("FFA42E"),
-    HEX("D6D300"),
-    HEX("38FF48"),
-    HEX("3B90FF"),
-    HEX("B639FF"),
-  },
+  colours = { HEX("8574CE") }
 }
 
 SMODS.Gradient {
@@ -68,23 +32,32 @@ SMODS.Gradient {
     HEX("EDAEBF"),
     HEX("D6D6D6"),
     HEX("EDAEBF"),
-    HEX("73CFF4"),
+  }
+}
+
+SMODS.Gradient {
+  key = "galaxy",
+  cycle = 5,
+  interpolation = 'trig',
+  colours = {
+    HEX("9E74CE"),
+    HEX("8574CE")
   }
 }
 
 SMODS.ConsumableType {
-    key = 'star_astral',
-    default = 'c_star_creation',
-    collection = 'b_star_astral_cards',
-    primary_colour = SMODS.Gradients.star_rainbow,
-    secondary_colour = SMODS.Gradients.star_rainbow,
-    collection_rows = { 4, 4 },
-    shop_rate = 0,
+  key = 'star_astral',
+  default = 'c_star_creation',
+  collection = 'b_star_astral_cards',
+  primary_colour = HEX("8574CE"),
+  secondary_colour = HEX("8574CE"),
+  collection_rows = { 4, 4 },
+  shop_rate = 0,
 }
 
 SMODS.Rarity {
   key = "galaxy",
-  badge_colour = SMODS.Gradients.star_starspace,
+  badge_colour = SMODS.Gradients.star_galaxy,
   default_weight = 0
 }
 

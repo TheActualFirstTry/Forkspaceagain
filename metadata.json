@@ -5,8 +5,8 @@
 	"description": "Astro's personal mod.",
 	"prefix": "star",
 	"main_file": "starspace.lua",
-	"badge_colour": "4B36AB",
-	"badge_text_colour": "00E4FF",
+	"badge_colour": "3E4B4D",
+	"badge_text_colour": "46E0F7",
 	"version": "0.0.0",
 	"dependencies": [
 		"Steamodded (>=1.0.0~BETA-1016c)"

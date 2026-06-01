@@ -41,12 +41,18 @@ return {
           "for the next hand"
         },
       },
-        j_star_crystal = {
-          name = "Crystal"
-        },
-        j_star_shard = {
-          name = "Shard"
-        },
+      j_star_crystal = {
+        name = "Crystal"
+      },
+      j_star_shard = {
+        name = "Shard",
+        text = {
+          "This Joker gains",
+          "{X:mult,C:white}X#2#{} Mult every time",
+          "an {C:star_astral}Astral{} card is used",
+          "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+        }
+      },
       j_star_astroling = {
         name = "Astroling",
         text = {
@@ -165,8 +171,9 @@ return {
       j_star_firsttry = {
         name = "FirstTry",
         text = {
-          "Every {C:attention}#2#{C:inactive}[#1#]{} used {C:star_rainbow}Astral{} cards",
-          "create a random {C:white,X:star_rainbow}Rare#3#Consumable",
+          "Every {C:attention}#2# {C:inactive}[#1#]{} used {C:star_astral}Astral{}",
+          "cards, create a random",
+          "{C:dark_edition,E:1}rare{} {C:attention}Consumable{} card",
         }
       },
       j_star_selfie = {
@@ -179,7 +186,7 @@ return {
       j_star_cassknows = {
         name = "cassknows",
         text = {
-          "Held {C:star_rainbow}Astral{} cards give",
+          "Held {C:star_astral}Astral{} cards give",
           "{C:chips}+#1#{} Chips for every time",
           "they've been used this run"
         }
@@ -243,100 +250,98 @@ return {
       c_star_chaos = {
         name = "Chaos",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_rebirth = {
         name = "Rebirth",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_entropy = {
         name = "Entropy",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_ruin = {
         name = "Ruin",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_destruction = {
         name = "Destruction",
         text = {
-          "{C:star_rainbow}2 of 3{} cards held in hand",
+          "{C:star_astral}2 of 3{} cards held in hand",
           "are {E:1,C:red}destroyed{}, rounding up"
         }
       },
       c_star_blood = {
         name = "Blood",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_end = {
         name = "End",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_fate = {
         name = "Fate",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_order = {
         name = "Order",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_insignia = {
         name = "Insignia",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_light = {
         name = "Light",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_fractal = {
         name = "Fractal",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_creation = {
         name = "Creation",
         text = {
-          "Creates the last {C:star_rainbow}Astral{} Card",
-          "used during this run",
-          "{s:0.8,C:star_rainbow}Creation{s:0.8} excluded"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_genesis = {
         name = "Genesis",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_evolution = {
         name = "Evolution",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
       c_star_mutation = {
         name = "Mutation",
         text = {
-          "{S:1.5,C:star_rainbow,E:1}#1#"
+          "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
     }
@@ -347,7 +352,7 @@ return {
       ach_star_your_pick = "Take Your Pick",
     },
     achievement_descriptions = {
-      ach_entr_your_pick = "Own Crystal and Shard simultaneously",
+      ach_star_your_pick = "Own Crystal and Shard simultaneously",
     },
 
     dictionary = {

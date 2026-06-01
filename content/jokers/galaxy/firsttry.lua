@@ -6,7 +6,7 @@ SMODS.Joker {
     config = { extra = {
 
     }, immutable = { 
-        astral = 0, astral_inc = 1, astral_max = 4
+        astral = 4, astral_inc = -1, astral_max = 4
      } },
     rarity = "star_galaxy",
     cost = 50,
@@ -17,7 +17,8 @@ SMODS.Joker {
 
     loc_vars = function(self, info_queue, card)
         return {
-            vars = { card.ability.immutable.astral, card.ability.immutable.astral_max, " " } }
+            vars = { card.ability.immutable.astral, card.ability.immutable.astral_max }
+        } 
     end,
 
     calculate = function(self, card, context)
@@ -28,10 +29,10 @@ SMODS.Joker {
                     scalar_value = "astral_inc",
                     no_message = true
                 })
-                if card.ability.immutable.astral <= 3 then
+                if card.ability.immutable.astral >= 1 then
                     SMODS.calculate_effect({message = (card.ability.immutable.astral) .. "/" .. card.ability.immutable.astral_max, colour = SMODS.Gradients["star_fast_rainbow"], card = card})
                 else
-                if card.ability.immutable.astral >= card.ability.immutable.astral_max then
+                if card.ability.immutable.astral <= 0 then
             local pool = {}
                     for _,v in ipairs(G.P_CENTER_POOLS.Consumeables) do
                       if v.hidden and v.key ~= "c_star_starspace" then pool[#pool+1] = v.key end
@@ -47,7 +48,7 @@ SMODS.Joker {
                     end)
                 }))
                     end
-                    card.ability.immutable.astral = 0
+                    card.ability.immutable.astral = card.ability.immutable.astral_max
             end
         end
     end

@@ -1,5 +1,4 @@
 -- Joker table
-
 STAR_UTIL.enabled_commons = {
   "astroling",
   "scrap_machete",
