@@ -4,6 +4,7 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   config = { extra = {
     tarot_used = false,
+    plasma_xscore = 2
   }
   },
   rarity = 3,
@@ -12,14 +13,6 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pronouns = "he_him",
-  
-  loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-
-      }
-    }
-  end,
 
   calculate = function(self, card, context)
     if card.ability.extra.tarot_used == false and context.using_consumeable and context.consumeable.ability.set == 'Tarot' then
@@ -35,7 +28,7 @@ SMODS.Joker {
     if card.ability.extra.tarot_used == true and context.final_scoring_step then
       card.ability.extra.tarot_used = false
       return {
-        balance = true
+        balance = true,
       }
     end
   end

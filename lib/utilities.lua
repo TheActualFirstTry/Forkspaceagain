@@ -19,13 +19,14 @@ STAR_UTIL.enabled_uncommons = {
 }
 
 STAR_UTIL.enabled_rares = {
+  "the_grace",
   "astro",
   "scrap",
+  "selfie",
   "crystal",
   "shard",
-  "selfie",
+  "ruby",
   "giant_pizza",
-  "the_grace",
   "twice_twice"
 }
 
@@ -89,6 +90,10 @@ STAR_UTIL.enabled_quips = {
 STAR_UTIL.enabled_vouchers = {
 }
 
+STAR_UTIL.enabled_boosters = {
+"space1"
+}
+
 STAR_UTIL.enabled_achievements = {
   "your_pick"
 }
@@ -96,6 +101,7 @@ STAR_UTIL.enabled_achievements = {
 -- custom colors
 STAR_UTIL.colors = {
 }
+
 loc_colour()
 for i, v in pairs(STAR_UTIL.colors) do
   G.ARGS.LOC_COLOURS["star_" .. i] = v

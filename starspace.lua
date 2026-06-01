@@ -69,6 +69,7 @@ STAR_UTIL.load_items(STAR_UTIL.enabled_hands, 'content/pokerhands')
 STAR_UTIL.load_items(STAR_UTIL.enabled_modifiers, 'content/modifiers')
 STAR_UTIL.load_items(STAR_UTIL.enabled_quips, 'content/quips')
 STAR_UTIL.load_items(STAR_UTIL.enabled_vouchers, 'content/vouchers')
+STAR_UTIL.load_items(STAR_UTIL.enabled_boosters, 'content/boosters')
 STAR_UTIL.load_items(STAR_UTIL.enabled_achievements, 'content/achievements')
 
 for modid, jokerlist in pairs(STAR_UTIL.enabled_crossmod) do

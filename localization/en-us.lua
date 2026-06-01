@@ -38,19 +38,20 @@ return {
         text = {
           "When a {C:tarot}Tarot{} card is used,",
           "balance {C:chips}Chips{} and {C:mult}Mult{}",
-          "for the next hand"
+          "for the next hand",
+          "#4$"
         },
       },
       j_star_crystal = {
-        name = "Crystal"
+        name = "Crystal",
+        text = {
+          ":3"
+        }
       },
       j_star_shard = {
         name = "Shard",
         text = {
-          "This Joker gains",
-          "{X:mult,C:white}X#2#{} Mult every time",
-          "an {C:star_astral}Astral{} card is used",
-          "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+          ":3"
         }
       },
       j_star_astroling = {
@@ -72,6 +73,14 @@ return {
         text = {
           "{X:mult,C:white}X#2#{} Mult",
           "{X:mult,C:white}-X1{} Mult per hand played"
+        }
+      },
+      j_star_ruby = {
+        name = "Ruby",
+        text = {
+          "This Joker gains {C:mult}+#2#{} Mult",
+          "for every used {C:star_astral}Astral{} card",
+          "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)"
         }
       },
       j_star_flash_card = {
@@ -186,9 +195,9 @@ return {
       j_star_cassknows = {
         name = "cassknows",
         text = {
-          "Held {C:star_astral}Astral{} cards give",
-          "{C:chips}+#1#{} Chips for every time",
-          "they've been used this run"
+          "Each held {C:star_astral}Astral{} card gives",
+          "{C:chips}+#1#{} Chips per use of",
+          "that {C:star_astral}Astral{} card this run",
         }
       },
       j_star_zenith = {
@@ -273,9 +282,15 @@ return {
       },
       c_star_destruction = {
         name = "Destruction",
-        text = {
-          "{C:star_astral}2 of 3{} cards held in hand",
-          "are {E:1,C:red}destroyed{}, rounding up"
+        text = { {
+          "{C:red}-$#1#{}, spawns a random {C:star_astral}Astral{} card",
+          "for every empty {C:attention}Consumable{} slot"
+        },
+          {
+            "Lose 1 less {C:money}${} for each time",
+            "{C:star_astral}Destruction{} has been used this run",
+            "{C:inactive}(Destruction uses: {C:star_astral}#2#{C:inactive})"
+          }
         }
       },
       c_star_blood = {

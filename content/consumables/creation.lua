@@ -3,8 +3,7 @@ SMODS.Consumable {
     set = 'star_astral',
     atlas = 'astral_cards',
     pos = { x = 0, y = 3 },
-
-        loc_vars = function(self, info_queue, card)
+    loc_vars = function(self, info_queue, card)
         return { vars = { G.GAME.c_star_creation_used or 0 } }
     end,
 
