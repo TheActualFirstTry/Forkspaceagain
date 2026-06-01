@@ -170,6 +170,14 @@ return {
           "{X:chips,C:white}X#1#{} Chips when scored"
         }
       },
+      j_star_cassknows = {
+        name = "cassknows",
+        text = {
+          "Held {C:star_rainbow}Astral{} cards give",
+          "{C:chips}+#1#{} Chips for every time",
+          "they've been used this run"
+        }
+      },
       j_star_zenith = {
         name = "Zenith",
         text = {

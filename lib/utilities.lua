@@ -15,7 +15,8 @@ STAR_UTIL.enabled_uncommons = {
   "magolor",
   "marx",
   "weathergirl",
-  "wall_of_flesh"
+  "wall_of_flesh",
+  "cassknows"
 }
 
 STAR_UTIL.enabled_rares = {
