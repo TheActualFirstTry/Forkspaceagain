@@ -31,6 +31,9 @@ SMODS.Joker {
                         colour = SMODS.Gradients["star_fast_rainbow"],
                     },
                 })
+                if card.ability.immutable.astral <= 3 then
+                    SMODS.calculate_effect({message = "Charged!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
+                else
                 if card.ability.immutable.astral >= card.ability.immutable.astral_max then
             local pool = {}
                     for _,v in ipairs(G.P_CENTER_POOLS.Consumeables) do
@@ -39,14 +42,6 @@ SMODS.Joker {
                 local random_key = pseudorandom_element(pool, "random_rare_consumeable")
                 if (#G.consumeables.cards < G.consumeables.config.card_limit) then
                     if random_key then
-                        G.E_MANAGER:add_event(Event({
-                        trigger = 'before',
-                        delay = 0.8,
-                        func = (function()
-                        SMODS.calculate_effect({message = "Charged!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
-                        return true
-                    end)
-                }))
                         G.E_MANAGER:add_event(Event({
                         func = (function()
                         SMODS.calculate_effect({message = "Busted!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
@@ -59,5 +54,6 @@ SMODS.Joker {
             end
         end
     end
+end
 end
 }
