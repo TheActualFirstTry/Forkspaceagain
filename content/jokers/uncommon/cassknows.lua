@@ -3,7 +3,7 @@ SMODS.Joker {
     atlas = "jokers",
     pos = { x = 9, y = 6 },
     config = { extra = {
-        t_chips = 25
+        t_chips = 30
     } },
     rarity = 2,
     cost = 8,
@@ -23,7 +23,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' then
             return {
-                chips = card.ability.extra.t_chips * (G.GAME[context.other_consumeable.config.center.key .. "_used"]),
+                chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"],
                 message_card = context.other_consumeable
             }
         end

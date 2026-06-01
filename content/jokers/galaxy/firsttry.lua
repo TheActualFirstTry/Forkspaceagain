@@ -26,13 +26,10 @@ SMODS.Joker {
                     ref_table = card.ability.immutable,
                     ref_value = "astral",
                     scalar_value = "astral_inc",
-                    scaling_message = {
-                        message = (card.ability.immutable.astral + card.ability.immutable.astral_inc) .. "/" .. card.ability.immutable.astral_max,
-                        colour = SMODS.Gradients["star_fast_rainbow"],
-                    },
+                    no_message = true
                 })
                 if card.ability.immutable.astral <= 3 then
-                    SMODS.calculate_effect({message = "Charged!", colour = SMODS.Gradients["star_fast_rainbow"], card = card})
+                    SMODS.calculate_effect({message = (card.ability.immutable.astral) .. "/" .. card.ability.immutable.astral_max, colour = SMODS.Gradients["star_fast_rainbow"], card = card})
                 else
                 if card.ability.immutable.astral >= card.ability.immutable.astral_max then
             local pool = {}
