@@ -5,7 +5,8 @@ SMODS.Consumable {
     pos = { x = 0, y = 1 },
     config = { extra = { money_loss = 8 } },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.money_loss, G.GAME.c_star_destruction_used or 0 } }
+        local final_loss = math.max(card.ability.extra.money_loss - (G.GAME.c_star_destruction_used or 0), 0)
+        return { vars = { final_loss, G.GAME.c_star_destruction_used or 0 } }
     end,
 
     use = function(self, card, area, copier)
@@ -24,7 +25,7 @@ SMODS.Consumable {
             }))
         end
         if G.GAME.c_star_destruction_used and G.GAME.c_star_destruction_used < card.ability.extra.money_loss then
-            ease_dollars((-1 * card.ability.extra.money_loss) + G.GAME.c_star_destruction_used)
+            ease_dollars(math.min(0, (-1 * card.ability.extra.money_loss) + G.GAME.c_star_destruction_used))
         else
             ease_dollars(-1 * card.ability.extra.money_loss)
         end

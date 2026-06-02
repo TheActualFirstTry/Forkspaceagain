@@ -51,7 +51,9 @@ return {
       j_star_shard = {
         name = "Shard",
         text = {
-          ":3"
+          "Create a {C:attention}Coupon Tag{}",
+          "if {C:attention}Blind{} is defeated",
+          "with {C:money}$#1#{} or less"
         }
       },
       j_star_astroling = {
@@ -224,13 +226,13 @@ return {
     },
     Tag = {
       tag_star_stardust = {
-                name = "Stardust Tag",
-                text = {
-                    "Gives a free",
-                    "{C:attention}Space Pack",
-                },
-            },
-          },
+        name = "Stardust Tag",
+        text = {
+          "Gives a free",
+          "{C:attention}Space Pack",
+        },
+      },
+    },
     Other = {
       p_star_space_pack = {
         name = "Space Pack",
@@ -371,8 +373,15 @@ return {
       },
       c_star_creation = {
         name = "Creation",
-        text = {
-          "{S:1.5,C:star_astral,E:1}#1#"
+        text = { {
+          "Gives {C:attention}#1#%{} the {C:money}${}",
+          " gained from previous payout"
+        },
+          {
+            "Gains {C:attention}+#2#%{} {C:money}${} for each time",
+            "{C:star_astral}Creation{} has been used this run",
+            "{C:inactive}(Creation uses: {C:star_astral}#3#{C:inactive}, will give {C:money}+$#4#{C:inactive})"
+          }
         }
       },
       c_star_genesis = {
@@ -397,6 +406,10 @@ return {
 
   },
   misc = {
+    challenge_names = {
+      c_star_shopping = "Go Shopping, Girl",
+    },
+
     achievement_names = {
       ach_star_your_pick = "Take Your Pick",
     },

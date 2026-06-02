@@ -105,6 +105,10 @@ STAR_UTIL.enabled_tags = {
   "stardust"
 }
 
+STAR_UTIL.enabled_challenges = {
+  "shopping"
+}
+
 STAR_UTIL.enabled_achievements = {
   "your_pick"
 }

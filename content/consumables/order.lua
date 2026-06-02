@@ -9,6 +9,7 @@ SMODS.Consumable {
     end,
 
     use = function(self, card, area, copier)
+        
     end,
 
     can_use = function(self, card)

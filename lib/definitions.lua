@@ -13,7 +13,7 @@ end
 SMODS.current_mod.calculate = function(self, context)
   if context.using_consumeable and context.consumeable.ability.set == 'star_astral' then
     G.GAME[context.consumeable.config.center.key .. "_used"] = (G.GAME[context.consumeable.config.center.key .. "_used"] or 0) +
-    1
+        1
   end
 end
 

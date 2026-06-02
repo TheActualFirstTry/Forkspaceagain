@@ -1,5 +1,3 @@
--- add a SELECT button to consumables if Shoplift is redeemed
-
 local old_set_consumeable_usage = set_consumeable_usage
 function set_consumeable_usage(card)
   if card.config.center_key and (card.config.center.set == 'star_astral') then

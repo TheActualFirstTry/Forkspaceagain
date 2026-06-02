@@ -71,6 +71,7 @@ STAR_UTIL.load_items(STAR_UTIL.enabled_quips, 'content/quips')
 STAR_UTIL.load_items(STAR_UTIL.enabled_vouchers, 'content/vouchers')
 STAR_UTIL.load_items(STAR_UTIL.enabled_boosters, 'content/misc/boosters')
 STAR_UTIL.load_items(STAR_UTIL.enabled_tags, 'content/misc/tags')
+STAR_UTIL.load_items(STAR_UTIL.enabled_challenges, 'content/misc/challenges')
 STAR_UTIL.load_items(STAR_UTIL.enabled_achievements, 'content/misc/achievements')
 
 for modid, jokerlist in pairs(STAR_UTIL.enabled_crossmod) do
