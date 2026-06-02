@@ -1,12 +1,12 @@
 SMODS.Booster {
-    key = "space_normal_2",
+    key = "star_space_pack_3",
     weight = 1,
     kind = 'star_space',
     cost = 4,
-    pos = { x = 0, y = 0 },
-    config = { extra = 3, choose = 1 },
-    group_key = "k_star_space_normal",
-    draw_hand = false,
+    pos = { x = 2, y = 0 },
+    config = { extra = 2, choose = 1 },
+    group_key = "k_star_space_pack",
+    draw_hand = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
         return {

@@ -222,7 +222,40 @@ return {
         }
       }
     },
+    Tag = {
+      tag_star_stardust = {
+                name = "Stardust Tag",
+                text = {
+                    "Gives a free",
+                    "{C:attention}Space Pack",
+                },
+            },
+          },
     Other = {
+      p_star_space_pack = {
+        name = "Space Pack",
+        text = {
+          "Choose {C:attention}#1#{} of up to",
+          "{C:attention}#2#{C:star_astral} Astral{} cards to",
+          "be used immediately",
+        }
+      },
+      p_star_space_jumbo = {
+        name = "Jumbo Space Pack",
+        text = {
+          "Choose {C:attention}#1#{} of up to",
+          "{C:attention}#2#{C:star_astral} Astral{} cards to",
+          "be used immediately",
+        }
+      },
+      p_star_space_mega = {
+        name = "Mega Space Pack",
+        text = {
+          "Choose {C:attention}#1#{} of up to",
+          "{C:attention}#2#{C:star_astral} Astral{} cards to",
+          "be used immediately",
+        }
+      },
       undiscovered_star_astral = {
         name = "Not Discovered",
         text = {
@@ -259,7 +292,8 @@ return {
       c_star_chaos = {
         name = "Chaos",
         text = {
-          "{S:1.5,C:star_astral,E:1}#1#"
+          "",
+          "{C:inactive}(Chaos uses: {C:star_astral}#2#{C:inactive})"
         }
       },
       c_star_rebirth = {
@@ -371,15 +405,10 @@ return {
     },
 
     dictionary = {
-
-      k_star_space_normal = {
-        name = "Space Pack",
-        text = {
-          "Select {C:attention}#1#{} of up to",
-          "{C:attention}#2#{C:star_astral} Astral{} cards to",
-          "be collected or something",
-        }
-      },
+      -- Space Packs
+      k_star_space_pack = "Space Pack",
+      k_star_space_jumbo = "Space Pack",
+      k_star_space_mega = "Space Pack",
 
       -- Astral Cards
       k_star_astral = "Astral Card",

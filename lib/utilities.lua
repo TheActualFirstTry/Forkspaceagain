@@ -91,7 +91,18 @@ STAR_UTIL.enabled_vouchers = {
 }
 
 STAR_UTIL.enabled_boosters = {
-"space1"
+"space1",
+"space2",
+"space3",
+"space4",
+"space_jumbo1",
+"space_jumbo2",
+"space_mega1",
+"space_mega2",
+}
+
+STAR_UTIL.enabled_tags = {
+  "stardust"
 }
 
 STAR_UTIL.enabled_achievements = {
