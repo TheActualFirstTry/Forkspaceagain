@@ -147,6 +147,14 @@ return {
           "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
         }
       },
+      j_star_movie_star = {
+        name = "Movie Star",
+        text = {
+          "If played hand has only",
+          "{C:attention}1 Star{}, apply a",
+          " {C:attention}Gold Seal{} to that Star"
+        }
+      },
       j_star_copper_shortsword = {
         name = "Copper Shortsword",
         text = {
@@ -374,13 +382,13 @@ return {
       c_star_creation = {
         name = "Creation",
         text = { {
-          "Gives {C:attention}#1#%{} the {C:money}${}",
-          " gained from previous payout"
+          "Gives {C:attention}#1#{} the {C:money}${} gained",
+          "from {C:attention}previous payout"
         },
           {
-            "Gains {C:attention}+#2#%{} {C:money}${} for each time",
+            "Gains {C:attention}+1{} numerator for each time",
             "{C:star_astral}Creation{} has been used this run",
-            "{C:inactive}(Creation uses: {C:star_astral}#3#{C:inactive}, will give {C:money}+$#4#{C:inactive})"
+            "{C:inactive}(Creation uses: {C:star_astral}#2#{C:inactive}, will give {C:money}+$#3#{C:inactive})"
           }
         }
       },
@@ -406,8 +414,12 @@ return {
 
   },
   misc = {
+    v_text = {
+      ch_c_all_common = { "Only {C:common}Common{} Jokers may appear in the shop" }
+    },
     challenge_names = {
       c_star_shopping = "Go Shopping, Girl",
+      c_star_order = "Order"
     },
 
     achievement_names = {

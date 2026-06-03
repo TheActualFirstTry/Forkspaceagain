@@ -5,11 +5,12 @@ SMODS.Challenge {
             { id = 'no_interest' },
             { id = 'no_extra_hand_money' },
             { id = 'no_reward' }
-        }
+        },
+        modifiers = {
+            { id = 'joker_slots', value = 4 },
+        },
     },
-    modifiers = {
-        { id = 'joker_slots', value = 4 },
-    },
+
     jokers = {
         { id = 'j_star_shard', edition = 'negative' },
         { id = 'j_credit_card' }

@@ -15,11 +15,12 @@ STAR_UTIL.enabled_uncommons = {
   "marx",
   "weathergirl",
   "wall_of_flesh",
-  "cassknows"
+  "cassknows",
 }
 
 STAR_UTIL.enabled_rares = {
   "the_grace",
+  "movie_star",
   "astro",
   "scrap",
   "selfie",
@@ -91,14 +92,10 @@ STAR_UTIL.enabled_vouchers = {
 }
 
 STAR_UTIL.enabled_boosters = {
-"space1",
-"space2",
-"space3",
-"space4",
-"space_jumbo1",
-"space_jumbo2",
-"space_mega1",
-"space_mega2",
+  "space1",
+  "space2",
+  "space_jumbo",
+  "space_mega",
 }
 
 STAR_UTIL.enabled_tags = {
@@ -106,7 +103,8 @@ STAR_UTIL.enabled_tags = {
 }
 
 STAR_UTIL.enabled_challenges = {
-  "shopping"
+  "shopping",
+  "order"
 }
 
 STAR_UTIL.enabled_achievements = {

@@ -6,7 +6,7 @@ SMODS.Joker {
   cost = 10,
   blueprint_compat = false,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "he_him",
 
   calculate = function(self, card, context)

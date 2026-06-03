@@ -9,7 +9,7 @@ SMODS.Joker {
   cost = 6,
   blueprint_compat = true,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "he_him",
 
   loc_vars = function(self, info_queue, card)
@@ -19,7 +19,6 @@ SMODS.Joker {
       }
     }
   end,
-
 
   calculate = function(self, card, context)
     if context.poker_hand_changed then

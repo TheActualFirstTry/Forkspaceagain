@@ -7,7 +7,7 @@ SMODS.Joker {
   cost = 8,
   blueprint_compat = true,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "he_him",
   pools = { silicon = true },
 

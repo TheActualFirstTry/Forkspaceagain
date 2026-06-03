@@ -4,12 +4,13 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   rarity = 1,
   cost = 5,
-  blueprint_compat = true,
+  blueprint_compat = false,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "he_him",
 
   calculate = function(self, card, context)
+    
   end
 }
 
