@@ -31,7 +31,7 @@ SMODS.Joker {
       SMODS.scale_card(card, {
         ref_table = card.ability.extra,
         ref_value = "t_chips",
-        scalar_value = "gain",
+        scalar_value = "t_chips_gain",
         scalar_table = { gain = (card.ability.extra.t_chips_gain * destroyed_cards) },
         colour = G.C.CHIPS
       })

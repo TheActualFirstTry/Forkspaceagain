@@ -3,6 +3,7 @@ SMODS.Booster {
     weight = 1,
     kind = 'star_space',
     cost = 4,
+    atlas = "boosters",
     pos = { x = 1, y = 0 },
     config = { extra = 2, choose = 1 },
     group_key = "k_star_space_pack",

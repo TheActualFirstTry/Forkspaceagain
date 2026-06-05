@@ -93,6 +93,22 @@ return {
           "{C:inactive}(Currently {X:chips,C:white}X#2#{C:inactive} Chips){}"
         },
       },
+      j_star_little_prince = {
+        name = "The Little Prince",
+        text = {
+          "Each {C:attention}Star{} held in",
+          "hand gives {C:money}$#1#"
+        }
+      },
+      j_star_gerson = {
+        name = "Gerson",
+        text = {
+          "This Joker gains {C:purple}+#2#{} Score",
+          "if played hand contains",
+          "a {C:attention}Straight{}",
+          "{C:inactive}(Currently {C:purple}+#1#{C:inactive} Score)"
+        }
+      },
       j_star_galileo = {
         name = "Galileo",
         text = {
@@ -150,9 +166,19 @@ return {
       j_star_movie_star = {
         name = "Movie Star",
         text = {
-          "If played hand has only",
-          "{C:attention}1 Star{}, apply a",
-          " {C:attention}Gold Seal{} to that Star"
+          "If played hand contains",
+          "a single {C:attention}Star{},",
+          "add a {C:attention}Gold Seal{} to it"
+        }
+      },
+      j_star_flash_grenade = {
+        name = "Flash Grenade",
+        text = {
+          "If played hand contains",
+          "A {C:attention}Flash{}, next hand",
+          "will count as containing",
+          "a {C:attention}#1#{}",
+          "{C:inactive}(Most played poker hand)"
         }
       },
       j_star_copper_shortsword = {
@@ -208,6 +234,18 @@ return {
           "Each held {C:star_astral}Astral{} card gives",
           "{C:chips}+#1#{} Chips per use of",
           "that {C:star_astral}Astral{} card this run",
+        }
+      },
+      j_star_loop_rooms = {
+        name = "Looping The Rooms",
+        text = { {
+          "{C:tarot}Tarot{}, {C:planet}Planet{}, {C:spectral}Spectral{}, and {C:star_astral}Astral{}",
+          "cards may appear multiple times",
+        }, {
+          "This Joker gains {X:mult,C:white}X#2#{} Mult",
+          "when obtaining a duplicate {C:attention}Consumable{}",
+          "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+        }
         }
       },
       j_star_zenith = {
@@ -291,7 +329,7 @@ return {
       c_star_starspace = {
         name = "Starspace",
         text = {
-          "Creates a {C:star_starspace}Galaxy{} Joker",
+          "Creates a {C:star_galaxy}Galaxy{} Joker",
           "{C:inactive}(Must have room)"
         }
       }
@@ -301,9 +339,14 @@ return {
     star_astral = {
       c_star_chaos = {
         name = "Chaos",
-        text = {
-          "",
-          "{C:inactive}(Chaos uses: {C:star_astral}#2#{C:inactive})"
+        text = { {
+          "{C:red}-$#3#{}, add a random {C:attention}Seal{} and {C:attention}Enhancement{}",
+          "to {C:attention}#2#{} selected cards",
+        }, {
+          "Lose {C:attention}#4#{} extra {C:money}${} for each time",
+          "{C:star_astral}Chaos{} has been used this run",
+          "{C:inactive}(Destruction uses: {C:star_astral}#1#{C:inactive})"
+        }
         }
       },
       c_star_rebirth = {
@@ -331,7 +374,7 @@ return {
           "for every empty {C:attention}Consumable{} slot"
         },
           {
-            "Lose 1 less {C:money}${} for each time",
+            "Lose {C:attention}1{} less {C:money}${} for each time",
             "{C:star_astral}Destruction{} has been used this run",
             "{C:inactive}(Destruction uses: {C:star_astral}#2#{C:inactive})"
           }

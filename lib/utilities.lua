@@ -4,6 +4,7 @@ STAR_UTIL.enabled_commons = {
   "scrap_machete",
   "copper_shortsword",
   "galileo",
+  "gerson",
   "michael_jackson",
   "radiant_joker",
   "subtle_joker",
@@ -13,6 +14,7 @@ STAR_UTIL.enabled_uncommons = {
   "flash_card",
   "magolor",
   "marx",
+  "little_prince",
   "weathergirl",
   "wall_of_flesh",
   "cassknows",
@@ -27,11 +29,13 @@ STAR_UTIL.enabled_rares = {
   "crystal",
   "shard",
   "ruby",
+  "flash_grenade",
   "giant_pizza",
   "twice_twice"
 }
 
 STAR_UTIL.enabled_legendaries = {
+ "loop_rooms",
   -- "zenith"
 }
 
@@ -73,6 +77,13 @@ STAR_UTIL.enabled_decks = {
   "astral"
 }
 
+STAR_UTIL.enabled_stakes = {
+
+}
+
+STAR_UTIL.enabled_stickers = {
+
+}
 -- Poker hands table
 STAR_UTIL.enabled_hands = {
   "flash"
@@ -131,6 +142,16 @@ if next(SMODS.find_mod("cardpronouns")) then
     end,
     key = "star_michael_pronoun_jackson",
     classification = "masculine"
+  }
+  CardPronouns.Pronoun {
+    colour = CardPronouns.badge_types.she_her.colour,
+    text_colour = CardPronouns.badge_types.she_her.text_colour,
+    pronoun_table = { "女性", "She", "Her" },
+    in_pool = function()
+      return false
+    end,
+    key = "star_i_cant_feel_my_legs",
+    classification = "feminine"
   }
   CardPronouns.Pronoun {
     colour = HEX("80407E"),

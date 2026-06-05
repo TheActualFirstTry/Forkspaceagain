@@ -19,6 +19,13 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
+-- booster pack atlas
+SMODS.Atlas {
+  key = "boosters",
+  path = "boosters.png",
+  px = 71, py = 95
+}
+
 -- astral card atlas
 SMODS.Atlas {
   key = "astral_cards",
@@ -65,6 +72,8 @@ STAR_UTIL.load_items(STAR_UTIL.enabled_legendaries, 'content/jokers/legendary')
 STAR_UTIL.load_items(STAR_UTIL.enabled_galaxies, 'content/jokers/galaxy')
 STAR_UTIL.load_items(STAR_UTIL.enabled_consumables, 'content/consumables')
 STAR_UTIL.load_items(STAR_UTIL.enabled_decks, 'content/decks')
+STAR_UTIL.load_items(STAR_UTIL.enabled_stakes, 'content/misc/stakes')
+STAR_UTIL.load_items(STAR_UTIL.enabled_stickers, 'content/misc/stickers')
 STAR_UTIL.load_items(STAR_UTIL.enabled_hands, 'content/pokerhands')
 STAR_UTIL.load_items(STAR_UTIL.enabled_modifiers, 'content/modifiers')
 STAR_UTIL.load_items(STAR_UTIL.enabled_quips, 'content/quips')

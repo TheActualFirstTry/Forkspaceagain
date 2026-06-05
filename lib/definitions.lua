@@ -25,13 +25,12 @@ SMODS.Gradient {
 
 SMODS.Gradient {
   key = "trans",
-  cycle = 10,
-  interpolation = 'trig',
+  cycle = 8,
   colours = {
-    HEX("73CFF4"),
-    HEX("EDAEBF"),
-    HEX("D6D6D6"),
-    HEX("EDAEBF"),
+    HEX("76BAD4"),
+    HEX("DBACB9"),
+    HEX("BAC3C4"),
+    HEX("DBACB9"),
   }
 }
 
