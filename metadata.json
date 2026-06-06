@@ -2,7 +2,7 @@
 	"id": "starspace",
 	"name": "Starspace",
 	"author": ["Astro", "Crystal", "Meta"],
-	"description": "A silly little expansion centered around Astro's likes and interests",
+	"description": "A silly little expansion centered around Astro's likes, friends, and interests",
 	"prefix": "star",
 	"main_file": "starspace.lua",
 	"badge_colour": "3E4B4D",

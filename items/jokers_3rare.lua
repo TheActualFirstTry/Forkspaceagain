@@ -318,12 +318,6 @@ SMODS.Joker {
   pronouns = "he_him",
 
   calculate = function(self, card, context)
-    if context.setting_blind then
-      for _, deck_card in ipairs(context.deck_cards) do
-        if deck_card:get_id() == 2 then
-        end
-      end
-    end
     if context.discard then
       card.ability.extra.active = #context.full_hand == 1
     end
