@@ -2,7 +2,7 @@
 	"id": "starspace",
 	"name": "Starspace",
 	"author": ["Astro", "Crystal", "Meta"],
-	"description": "Astro's personal mod.",
+	"description": "A silly little expansion centered around Astro's likes and interests",
 	"prefix": "star",
 	"main_file": "starspace.lua",
 	"badge_colour": "3E4B4D",
