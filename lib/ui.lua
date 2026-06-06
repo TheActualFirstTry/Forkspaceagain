@@ -86,8 +86,7 @@ for k, v in pairs(STAR_UTIL.credits) do
             }
         }
 
-        return {
-            {
+        return { {
                 label = localize('b_credits'),
                 tab_definition_function = function()
                 return credits_tab

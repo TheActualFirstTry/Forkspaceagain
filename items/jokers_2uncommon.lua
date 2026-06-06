@@ -27,9 +27,7 @@ SMODS.Joker {
             })
         end
         if context.joker_main then
-            return {
-                x_chips = card.ability.extra.xchips
-            }
+            return { xchips = card.ability.extra.xchips }
         end
     end
 }
@@ -54,10 +52,7 @@ SMODS.Joker {
         if context.individual and context.cardarea == G.hand and not context.end_of_round then
             if context.other_card:get_id() == SMODS.Ranks['star_star'].id then
                 if context.other_card.debuff then
-                    return {
-                        message = localize('k_debuffed'),
-                        colour = G.C.RED
-                    }
+                    return { message = localize('k_debuffed'), colour = G.C.RED }
                 else
                     G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.ability.extra.dollars
                     return {
@@ -157,9 +152,7 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and SMODS.pseudorandom_probability(card, 'example_prob', card.ability.extra.numerator, card.ability.extra.denominator) and
             SMODS.has_enhancement(context.other_card, 'm_lucky') then
-            return {
-                xmult = card.ability.extra.xmult
-            }
+            return { xmult = card.ability.extra.xmult }
         end
     end,
     in_pool = function(self, args)
@@ -246,7 +239,7 @@ SMODS.Joker {
         end
     end }
 
-    SMODS.Joker {
+SMODS.Joker {
     key = "cassknows",
     atlas = "jokers",
     pos = { x = 9, y = 6 },
@@ -264,10 +257,8 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' and G.GAME[context.other_consumeable.config.center.key .. "_used"] then
-            return {
-                chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"],
-                message_card = context.other_consumeable
-            }
+            return { chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"], message_card =
+            context.other_consumeable }
         end
     end
 }

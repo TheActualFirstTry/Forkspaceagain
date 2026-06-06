@@ -131,9 +131,7 @@ SMODS.Joker {
             })
         end
         if context.final_scoring_step then
-            return {
-                score = card.ability.extra.t_score
-            }
+            return { score = card.ability.extra.t_score }
         end
     end
 }

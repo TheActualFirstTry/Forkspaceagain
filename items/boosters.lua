@@ -10,8 +10,7 @@ SMODS.Booster {
     draw_hand = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
-        return {
-            vars = {
+        return { vars = {
                 math.min(cfg.choose + (G.GAME.modifiers.booster_choice_mod or 0),
                     math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0))),
                 math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0)) },
@@ -58,8 +57,7 @@ SMODS.Booster {
     draw_hand = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
-        return {
-            vars = {
+        return { vars = {
                 math.min(cfg.choose + (G.GAME.modifiers.booster_choice_mod or 0),
                     math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0))),
                 math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0)) },
@@ -106,8 +104,7 @@ SMODS.Booster {
     draw_hand = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
-        return {
-            vars = {
+        return { vars = {
                 math.min(cfg.choose + (G.GAME.modifiers.booster_choice_mod or 0),
                     math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0))),
                 math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0)) },
@@ -154,13 +151,12 @@ SMODS.Booster {
     draw_hand = true,
     loc_vars = function(self, info_queue, card)
         local cfg = (card and card.ability) or self.config
-        return {
-            vars = {
+        return { vars = {
                 math.min(cfg.choose + (G.GAME.modifiers.booster_choice_mod or 0),
                     math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0))),
                 math.max(1, cfg.extra + (G.GAME.modifiers.booster_size_mod or 0)) },
             key = self.key:sub(1, -3),
-        }
+}
     end,
     particles = function(self)
         G.booster_pack_sparkles = Particles(1, 1, 0, 0, {

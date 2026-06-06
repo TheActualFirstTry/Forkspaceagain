@@ -23,8 +23,7 @@ local uasb_ref = G.UIDEF.use_and_sell_buttons
 function G.UIDEF.use_and_sell_buttons(card)
   if (card.area == G.pack_cards and G.pack_cards) and card.ability.consumeable then
     if G.STATE == G.STATES.SMODS_BOOSTER_OPENED and next(SMODS.find_card("v_star_shoplift")) then
-      return {
-        n = G.UIT.ROOT,
+      return { n = G.UIT.ROOT,
         config = { padding = -0.1, colour = G.C.CLEAR },
         nodes = {
           {

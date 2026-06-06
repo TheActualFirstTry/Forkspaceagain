@@ -1,5 +1,4 @@
-return {
-  descriptions = {
+return { descriptions = {
     Back = {
       b_star_starstruck = {
         name = "Starstruck Deck",
@@ -142,9 +141,10 @@ return {
       j_star_twice_twice = {
         name = "Twice Twice Paradise",
         text = {
-          "Played {C:attention}face{} cards",
-          "have their rank changed",
-          "to {C:attention}2{} after scoring"
+          "If {C:attention}discarded hand{}",
+          "has only {C:attention}1{} card, attempt",
+          "to draw a random",
+          "{C:attention}2{} from full deck",
         }
       },
       j_star_michael_jackson = {

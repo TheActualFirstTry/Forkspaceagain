@@ -10,6 +10,28 @@ function count_tarots()
   return tarot_counter
 end
 
+local orig_G_FUNCS_draw_from_deck_to_hand = G.FUNCS.draw_from_deck_to_hand
+G.FUNCS.draw_from_deck_to_hand = function(e)
+	local card_priorities = {}
+	SMODS.calculate_context({
+		star_drawing_cards = true,
+		deck_cards = G.deck.cards,
+		priorities = card_priorities
+	})
+	if next(card_priorities) then
+		table.sort(G.deck.cards, function(a, b)
+			local priority_a = card_priorities[a] or 0
+			local priority_b = card_priorities[b] or 0
+			return priority_a < priority_b
+		end)
+		G.deck:set_ranks()
+	end
+
+	local ret = orig_G_FUNCS_draw_from_deck_to_hand(e)
+	return ret
+end
+
+
 SMODS.Gradient {
   key = "astral",
   cycle = 1,

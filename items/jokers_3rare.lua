@@ -2,10 +2,7 @@ SMODS.Joker {
   key = "ruby",
   atlas = "jokers",
   pos = { x = 8, y = 6 },
-  config = { extra = {
-    t_mult = 0,
-    t_mult_gain = 6
-  } },
+  config = { extra = { t_mult = 0, t_mult_gain = 6 } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -14,12 +11,7 @@ SMODS.Joker {
   pronouns = "she_her",
 
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-        card.ability.extra.t_mult,
-        card.ability.extra.t_mult_gain
-      }
-    }
+    return { vars = { card.ability.extra.t_mult, card.ability.extra.t_mult_gain } }
   end,
 
   calculate = function(self, card, context)
@@ -31,9 +23,7 @@ SMODS.Joker {
       })
     end
     if context.joker_main then
-      return {
-        mult = card.ability.extra.t_mult
-      }
+      return { mult = card.ability.extra.t_mult }
     end
   end
 }
@@ -42,9 +32,7 @@ SMODS.Joker {
   key = "astro",
   atlas = "jokers",
   pos = { x = 0, y = 0 },
-  config = { extra = {
-    repetitions = 1
-  } },
+  config = { extra = { repetitions = 1 } },
   rarity = 3,
   cost = 9,
   cost = 8,
@@ -59,11 +47,7 @@ SMODS.Joker {
   end,
   calculate = function(self, card, context)
     if context.repetition and context.other_card:is_suit(G.GAME.current_round.star_castle_card.suit) then
-      return {
-        repetitions = card.ability.extra.repetitions
-      }
-    end
-    if context.end_of_round then
+      return { repetitions = card.ability.extra.repetitions }
     end
   end
 }
@@ -72,10 +56,7 @@ SMODS.Joker {
   key = "scrap",
   atlas = "placeholder",
   pos = { x = 0, y = 0 },
-  config = { extra = {
-    tarot_used = false,
-  }
-  },
+  config = { extra = { tarot_used = false, } },
   rarity = 3,
   cost = 10,
   blueprint_compat = false,
@@ -90,15 +71,11 @@ SMODS.Joker {
         return card.ability.extra.tarot_used
       end
       juice_card_until(card, eval, true, 0.1)
-      return {
-        message = "Active!"
-      }
+      return { message = "Active!" }
     end
     if card.ability.extra.tarot_used == true and context.final_scoring_step then
       card.ability.extra.tarot_used = false
-      return {
-        balance = true,
-      }
+      return { balance = true, }
     end
   end
 }
@@ -107,8 +84,7 @@ SMODS.Joker {
   key = "crystal",
   atlas = "jokers",
   pos = { x = 2, y = 0 },
-  config = { extra = {
-  } },
+  config = { extra = { xmult = 1, xmult_gain = 0.1 } },
   rarity = 3,
   cost = 10,
   blueprint_compat = true,
@@ -122,12 +98,13 @@ SMODS.Joker {
     end
   end,
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-      }
-    }
+    return { vars = {} }
   end,
   calculate = function(self, card, context)
+    if context.discard and not context.other_card.debuff and
+        context.other_card:get_id() == 12 then
+
+    end
   end
 }
 
@@ -135,9 +112,7 @@ SMODS.Joker {
   key = "shard",
   atlas = "jokers",
   pos = { x = 6, y = 0 },
-  config = { extra = {
-    dollars = 4
-  } },
+  config = { extra = { dollars = 4 } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -152,11 +127,7 @@ SMODS.Joker {
   end,
 
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-        card.ability.extra.dollars
-      }
-    }
+    return { vars = { card.ability.extra.dollars } }
   end,
 
   calculate = function(self, card, context)
@@ -178,9 +149,7 @@ SMODS.Joker {
   key = "flash_grenade",
   atlas = "jokers",
   pos = { x = 6, y = 1 },
-  config = { extra = {
-    primed = false,
-  } },
+  config = { extra = { primed = false, } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -197,11 +166,7 @@ SMODS.Joker {
       end
     end
     local most_played = _handname
-    return {
-      vars = {
-        localize(most_played, 'poker_hands')
-      }
-    }
+    return { vars = { localize(most_played, 'poker_hands') } }
   end,
 
   calculate = function(self, card, context)
@@ -211,9 +176,7 @@ SMODS.Joker {
         return card.ability.extra.primed
       end
       juice_card_until(card, eval)
-      return {
-        message = "Active!"
-      }
+      return { message = "Active!" }
     end
     if card.ability.extra.primed == true then
       local _handname, _played = 'High Card', -1
@@ -225,9 +188,7 @@ SMODS.Joker {
       end
       local most_played = _handname
       if context.evaluate_poker_hand then
-        return {
-          replace_scoring_name = most_played
-        }
+        return { replace_scoring_name = most_played }
       end
       if card.ability.extra.primed == true and context.before then
         card.ability.extra.primed = false
@@ -256,22 +217,14 @@ SMODS.Joker {
     if context.after and not context.blueprint then
       if card.ability.extra.xmult - card.ability.extra.xmult_loss <= 1 then
         SMODS.destroy_cards(card, nil, nil, true)
-        return {
-          message = localize('k_eaten_ex'),
-          colour = G.C.RED
-        }
+        return { message = localize('k_eaten_ex'), colour = G.C.RED }
       else
         card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_loss
-        return {
-          message = "-X1 Mult",
-          colour = G.C.RED
-        }
+        return { message = "-X1 Mult", colour = G.C.RED }
       end
     end
     if context.joker_main then
-      return {
-        xmult = card.ability.extra.xmult
-      }
+      return { xmult = card.ability.extra.xmult }
     end
   end
 }
@@ -280,20 +233,12 @@ SMODS.Joker {
   key = "movie_star",
   atlas = "placeholder",
   pos = { x = 0, y = 0 },
-  config = { extra = {} },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
   eternal_compat = true,
   perishable_compat = false,
-  pronouns = "",
-
-  loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-      }
-    }
-  end,
+  pronouns = "he_him",
 
   calculate = function(self, card, context)
     if #G.play.cards == 1 and context.after then
@@ -318,10 +263,7 @@ SMODS.Joker {
   key = "selfie",
   atlas = "jokers",
   pos = { x = 2, y = 4 },
-  config = { extra = {
-    xchips = 1.5,
-    type = 'star_flash'
-  } },
+  config = { extra = { xchips = 1.5, type = 'star_flash' } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -330,19 +272,12 @@ SMODS.Joker {
   pronouns = "he_him",
 
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-        card.ability.extra.xchips,
-        localize(card.ability.extra.type, 'poker_hands')
-      }
-    }
+    return { vars = { card.ability.extra.xchips, localize(card.ability.extra.type, 'poker_hands') } }
   end,
 
   calculate = function(self, card, context)
     if context.individual and context.cardarea == G.play and context.other_card:is_face() and next(context.poker_hands[card.ability.extra.type]) then
-      return {
-        xchips = card.ability.extra.xchips
-      }
+      return { xchips = card.ability.extra.xchips }
     end
   end
 }
@@ -351,9 +286,7 @@ SMODS.Joker {
   key = "the_grace",
   atlas = "jokers",
   pos = { x = 2, y = 5 },
-  config = { extra = {
-    xmult = 2
-  } },
+  config = { extra = { remaining = 0 } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -362,18 +295,12 @@ SMODS.Joker {
   pronouns = "they_them",
 
   loc_vars = function(self, info_queue, card)
-    return {
-      vars = {
-        card.ability.extra.xmult
-      }
-    }
+    return { vars = { card.ability.extra.xmult } }
   end,
 
   calculate = function(self, card, context)
     if context.joker_main and next(context.poker_hands['star_flash']) then
-      return {
-        xmult = card.ability.extra.xmult
-      }
+      return { xmult = card.ability.extra.xmult }
     end
   end
 }
@@ -382,6 +309,7 @@ SMODS.Joker {
   key = "twice_twice",
   atlas = "placeholder",
   pos = { x = 0, y = 0 },
+  config = { extra = { active = false } },
   rarity = 3,
   cost = 10,
   blueprint_compat = false,
@@ -390,28 +318,24 @@ SMODS.Joker {
   pronouns = "he_him",
 
   calculate = function(self, card, context)
-    if context.after then
-      for _, played in ipairs(context.scoring_hand) do
-        if played:is_face() then
-          G.E_MANAGER:add_event(Event({
-            trigger = 'after',
-            delay = 0.4,
-            func = function()
-              play_sound('tarot1')
-              card:juice_up(0.3, 0.5)
-              return true
-            end,
-          }))
-          G.E_MANAGER:add_event(Event({
-            trigger = 'after',
-            delay = 0.2,
-            func = function()
-              assert(SMODS.change_base(played, nil, '2'))
-              return true
-            end,
-          }))
+    if context.setting_blind then
+      for _, deck_card in ipairs(context.deck_cards) do
+        if deck_card:get_id() == 2 then
         end
       end
+    end
+    if context.discard then
+      card.ability.extra.active = #context.full_hand == 1
+    end
+    if card.ability.extra.active and context.star_drawing_cards and G.STATE == G.STATES.DRAW_TO_HAND and not context.blueprint then
+      for _, deck_card in ipairs(context.deck_cards) do
+        if deck_card:get_id() == 2 then
+          context.priorities[deck_card] = 10
+          break
+        end
+      end
+      card.ability.extra.active = false
+      return { message = "Twice!" }
     end
   end
 }
@@ -432,5 +356,5 @@ local function reset_star_castle_card()
 end
 
 function SMODS.current_mod.reset_game_globals(run_start)
-  reset_star_castle_card()   -- See Mail-In Rebate
+  reset_star_castle_card() -- See Mail-In Rebate
 end

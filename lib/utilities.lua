@@ -1,6 +1,3 @@
-STAR_UTIL.enabled_crossmod = {
-  nflame = { "clanker" } }
-
 -- custom pronoun sets
 if next(SMODS.find_mod("cardpronouns")) then
   CardPronouns.Pronoun {
