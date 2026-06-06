@@ -1,9 +1,9 @@
 STAR_UTIL = {}
+local mod_path = "" .. SMODS.current_mod.path
 
-assert(SMODS.load_file('lib/definitions.lua'))()
-assert(SMODS.load_file('lib/utilities.lua'))()
-assert(SMODS.load_file('lib/hooks.lua'))()
-assert(SMODS.load_file('lib/ui.lua'))()
+for _, f in ipairs(NFS.getDirectoryItems(mod_path .. "lib")) do
+  assert(SMODS.load_file("lib/" .. f))()
+end
 
 -- placeholder atlas
 SMODS.Atlas {
@@ -65,26 +65,21 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
-STAR_UTIL.load_items(STAR_UTIL.enabled_commons, 'content/jokers/common')
-STAR_UTIL.load_items(STAR_UTIL.enabled_uncommons, 'content/jokers/uncommon')
-STAR_UTIL.load_items(STAR_UTIL.enabled_rares, 'content/jokers/rare')
-STAR_UTIL.load_items(STAR_UTIL.enabled_legendaries, 'content/jokers/legendary')
-STAR_UTIL.load_items(STAR_UTIL.enabled_galaxies, 'content/jokers/galaxy')
-STAR_UTIL.load_items(STAR_UTIL.enabled_consumables, 'content/consumables')
-STAR_UTIL.load_items(STAR_UTIL.enabled_decks, 'content/decks')
-STAR_UTIL.load_items(STAR_UTIL.enabled_stakes, 'content/misc/stakes')
-STAR_UTIL.load_items(STAR_UTIL.enabled_stickers, 'content/misc/stickers')
-STAR_UTIL.load_items(STAR_UTIL.enabled_hands, 'content/pokerhands')
-STAR_UTIL.load_items(STAR_UTIL.enabled_modifiers, 'content/modifiers')
-STAR_UTIL.load_items(STAR_UTIL.enabled_quips, 'content/quips')
-STAR_UTIL.load_items(STAR_UTIL.enabled_vouchers, 'content/vouchers')
-STAR_UTIL.load_items(STAR_UTIL.enabled_boosters, 'content/misc/boosters')
-STAR_UTIL.load_items(STAR_UTIL.enabled_tags, 'content/misc/tags')
-STAR_UTIL.load_items(STAR_UTIL.enabled_challenges, 'content/misc/challenges')
-STAR_UTIL.load_items(STAR_UTIL.enabled_achievements, 'content/misc/achievements')
+-- thanks neonflame
+for _, f in ipairs(NFS.getDirectoryItems(mod_path .. "items")) do
+  local objs = assert(SMODS.load_file("items/" .. f))() or {}
+  for _, o in ipairs(objs) do table.insert(regtable, o) end
+end
 
-for modid, jokerlist in pairs(STAR_UTIL.enabled_crossmod) do
-    if next(SMODS.find_mod(modid)) then
-        STAR_UTIL.load_items(jokerlist, "content/jokers/crossmod/" .. modid)
+for _, f in ipairs(NFS.getDirectoryItems(mod_path .. "crossmod")) do
+  local key, _ = string.gsub(f, "%..*$", "")
+  if next(SMODS.find_mod(key)) then
+    local objs = assert(SMODS.load_file("crossmod/" .. f))() or {}
+    for _, o in ipairs(objs) do
+      o.order = 10 -- put crossmod jokers at the VERY end
+      o.pools = o.pools or {}
+      o.pools.crossmod = true
+      table.insert(regtable, o)
     end
+  end
 end
