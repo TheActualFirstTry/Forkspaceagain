@@ -89,14 +89,15 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.poker_hand_changed then
+            local blueprint = context.blueprint_card
             G.GAME.hands[context.scoring_name].chips = G.GAME.hands[context.scoring_name].chips +
                 card.ability.extra.chipsbuff
             G.E_MANAGER:add_event(Event({
                 trigger = 'after',
                 delay = i == 1 and 0.2 or 0.9,
                 func = function()
+                    (blueprint or card):juice_up()
                     play_sound('tarot1')
-                    card:juice_up(0.8, 0.5)
                     G.TAROT_INTERRUPT_PULSE = true
                     return true
                 end
@@ -167,6 +168,40 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
+    key = "astrophage",
+    atlas = "placeholder",
+    pos = { x = 0, y = 0 },
+    config = { extra = { dollars = 2 } },
+    rarity = 1,
+    cost = 6,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    pronouns = "he_him",
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.dollars } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.change_suit then
+            local blueprint = context.blueprint_card
+            return {
+                dollars = card.ability.extra.dollars,
+                message_card = context.other_card,
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        (blueprint or card):juice_up()
+                        G.GAME.dollar_buffer = 0
+                        return true
+                    end
+                }))
+            }
+        end
+    end
+}
+
+SMODS.Joker {
     key = "radiant_joker",
     atlas = "jokers",
     pos = { x = 0, y = 5 },
@@ -190,29 +225,6 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
-    key = "subtle_joker",
-    atlas = "jokers",
-    pos = { x = 1, y = 5 },
-    config = { extra = { t_chips = 80 } },
-    rarity = 1,
-    cost = 4,
-    blueprint_compat = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    pronouns = "he_him",
-
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.t_chips } }
-    end,
-
-    calculate = function(self, card, context)
-        if context.joker_main and next(context.poker_hands['star_flash']) then
-            return { chips = card.ability.extra.t_chips }
-        end
-    end
-}
-
-SMODS.Joker {
     key = "starwalker",
     atlas = "placeholder",
     pos = { x = 0, y = 0 },
@@ -229,7 +241,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.discard and context.other_card:get_id() == SMODS.Ranks['star_star'].id and not context.other_card.debuff then
+        if context.discard and context.other_card:get_id() == SMODS.Ranks['star_star'].id and not context.other_card.debuff and not context.blueprint then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = "t_mult",
@@ -250,6 +262,29 @@ SMODS.Joker {
             end
         end
         return false
+    end
+}
+
+SMODS.Joker {
+    key = "subtle_joker",
+    atlas = "jokers",
+    pos = { x = 1, y = 5 },
+    config = { extra = { t_chips = 80 } },
+    rarity = 1,
+    cost = 4,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    pronouns = "he_him",
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.t_chips } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.joker_main and next(context.poker_hands['star_flash']) then
+            return { chips = card.ability.extra.t_chips }
+        end
     end
 }
 

@@ -52,7 +52,7 @@ SMODS.Joker {
     if context.end_of_round then
       card.ability.extra.hands_this_round = 0
     end
-    if context.joker_main and G.GAME.hands[context.scoring_name] and not (G.GAME.hands[context.scoring_name].played_this_round > 1) then
+    if context.joker_main and G.GAME.hands[context.scoring_name] and not (G.GAME.hands[context.scoring_name].played_this_round > 1) and not context.blueprint then
       card.ability.extra.hands_this_round = card.ability.extra.hands_this_round + 1
     end
     if context.joker_main then

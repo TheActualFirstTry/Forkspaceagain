@@ -101,7 +101,7 @@ SMODS.Joker {
   end,
   calculate = function(self, card, context)
     if context.discard and not context.other_card.debuff and
-        context.other_card:get_id() == 12 and not context.blueprint then
+        context.other_card:get_id() == 12 then
       context.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) +
           card.ability.extra.chips
       return {
@@ -136,13 +136,15 @@ SMODS.Joker {
 
   calculate = function(self, card, context)
     if context.end_of_round and context.game_over == false and G.GAME.dollars <= card.ability.extra.dollars then
+      local blueprint = context.blueprint_card
       G.E_MANAGER:add_event(Event({
-        delay = 0.4,
+        trigger = 'after',
+        delay = 0.45,
         func = (function()
+          (blueprint or card):juice_up()
           add_tag({ key = 'tag_coupon' })
           play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
           play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
-          card:juice_up(0.8, 0.5)
           return true
         end)
       }))
@@ -310,7 +312,7 @@ SMODS.Joker {
   key = "the_grace",
   atlas = "jokers",
   pos = { x = 2, y = 5 },
-  config = { extra = { remaining = 0 } },
+  config = { extra = { xmult = 2 } },
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
@@ -336,7 +338,7 @@ SMODS.Joker {
   config = { extra = { active = false } },
   rarity = 3,
   cost = 9,
-  blueprint_compat = true,
+  blueprint_compat = false,
   eternal_compat = true,
   perishable_compat = true,
   pronouns = "he_him",
@@ -345,7 +347,7 @@ SMODS.Joker {
     if context.discard then
       card.ability.extra.active = #context.full_hand == 1
     end
-    if card.ability.extra.active and context.star_drawing_cards and G.STATE == G.STATES.DRAW_TO_HAND and not context.blueprint then
+    if card.ability.extra.active and context.star_drawing_cards and G.STATE == G.STATES.DRAW_TO_HAND then
       for _, deck_card in ipairs(context.deck_cards) do
         if deck_card:get_id() == 2 then
           context.priorities[deck_card] = 10

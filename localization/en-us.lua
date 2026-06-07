@@ -140,6 +140,15 @@ return {
           "{C:inactive}(Must have room)"
         }
       },
+      j_star_stardrop = {
+        name = "Stardrop",
+        text = {
+          "After {C:attention}#3#{} rounds,",
+          "sell this card to create",
+          "a free {C:attention}#1#{}",
+          "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#3#)"
+        }
+      },
       j_star_twice_twice = {
         name = "Twice Twice Paradise",
         text = {
@@ -205,6 +214,13 @@ return {
           "{C:chips}+#1#{} Chips if played",
           "hand contains",
           "a {C:attention}Flash{}"
+        }
+      },
+      j_star_astrophage = {
+        name = "Astrophage",
+        text = {
+          "Playing cards give {C:money}+$#1#{}",
+          "when changing their {C:attention}suit{}",
         }
       },
       j_star_starwalker = {

@@ -33,6 +33,50 @@ SMODS.Joker {
 }
 
 SMODS.Joker {
+    key = "stardrop",
+    atlas = "placeholder",
+    pos = { x = 0, y = 0 },
+    config = { extra = { stardrop_rounds = 0, total_rounds = 3 } },
+    rarity = 2,
+    cost = 6,
+    blueprint_compat = true,
+    eternal_compat = false,
+    perishable_compat = true,
+
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = { key = 'tag_voucher', set = 'Tag' }
+        return { vars = { localize { type = 'name_text', set = 'Tag', key = 'tag_voucher' }, card.ability.extra.stardrop_rounds, card.ability.extra.total_rounds } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.selling_self and (card.ability.extra.stardrop_rounds >= card.ability.extra.total_rounds) then
+            G.E_MANAGER:add_event(Event({
+                func = (function()
+                    add_tag({ key = 'tag_voucher' })
+                    play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
+                    play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
+                    return true
+                end)
+            }))
+            return nil, true
+        end
+        if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+            card.ability.extra.stardrop_rounds = card.ability.extra.stardrop_rounds + 1
+            if card.ability.extra.stardrop_rounds == card.ability.extra.total_rounds then
+                local eval = function(card) return not card.REMOVED end
+                juice_card_until(card, eval, true)
+            end
+            return {
+                message = (card.ability.extra.stardrop_rounds < card.ability.extra.total_rounds) and
+                    (card.ability.extra.stardrop_rounds .. '/' .. card.ability.extra.total_rounds) or
+                    localize('k_active_ex'),
+                colour = G.C.FILTER
+            }
+        end
+    end
+}
+
+SMODS.Joker {
     key = "little_prince",
     atlas = "placeholder",
     pos = { x = 0, y = 0 },
@@ -265,8 +309,7 @@ SMODS.Joker {
         if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' and G.GAME[context.other_consumeable.config.center.key .. "_used"] then
             return {
                 chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"],
-                message_card =
-                    context.other_consumeable
+                message_card = context.other_consumeable
             }
         end
     end
