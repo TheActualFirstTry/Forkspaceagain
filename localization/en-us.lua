@@ -1,4 +1,5 @@
-return { descriptions = {
+return {
+  descriptions = {
     Back = {
       b_star_starstruck = {
         name = "Starstruck Deck",
@@ -44,7 +45,8 @@ return { descriptions = {
       j_star_crystal = {
         name = "Crystal",
         text = {
-          ":3"
+          "Discarded {C:attention}Queens{}",
+          "permanently gain {C:chips}+15{} Chips"
         }
       },
       j_star_shard = {
@@ -205,6 +207,14 @@ return { descriptions = {
           "a {C:attention}Flash{}"
         }
       },
+      j_star_starwalker = {
+        name = "The Original Starwalker",
+        text = {
+          "This Joker gains {C:mult}+#2#{} Mult",
+          "for each discarded {C:attention}Star{}",
+          "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult){}"
+        }
+      },
       j_star_the_grace = {
         name = "The Grace",
         text = {
@@ -219,6 +229,9 @@ return { descriptions = {
           "Every {C:attention}#2# {C:inactive}[#1#]{} used {C:star_astral}Astral{}",
           "cards, create a random",
           "{C:dark_edition,E:1}rare{} {C:attention}Consumable{} card",
+        },
+        unlock = {
+          "{E:1,s:1.3}?????",
         }
       },
       j_star_selfie = {
@@ -246,6 +259,9 @@ return { descriptions = {
           "when obtaining a duplicate {C:attention}Consumable{}",
           "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
         }
+        },
+        unlock = {
+          "{E:1,s:1.3}?????",
         }
       },
       j_star_zenith = {
@@ -255,6 +271,9 @@ return { descriptions = {
           "unique {C:attention}poker hand{}",
           "played this round",
           "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+        },
+        unlock = {
+          "{E:1,s:1.3}?????",
         }
       },
       j_star_clanker = {
@@ -277,6 +296,13 @@ return { descriptions = {
       },
     },
     Other = {
+      joker_locked_galaxy = {
+        name = "Locked",
+        text = {
+          "Find this Joker",
+          "{S:0.8}from the {S:0.8,C:spectral}Starspace{S:0.8} card"
+        }
+      },
       p_star_space_pack = {
         name = "Space Pack",
         text = {

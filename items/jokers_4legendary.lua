@@ -1,6 +1,7 @@
 SMODS.Joker {
   key = "loop_rooms",
   atlas = "placeholder",
+  unlocked = false,
   pos = { x = 0, y = 0 },
   config = { extra = { xmult = 1, xmult_gain = 1.5 } },
   rarity = 4,
@@ -24,14 +25,14 @@ SMODS.Joker {
       })
     end
     if context.joker_main then
-      return { xmult = card.ability.extra.xmult
-      }
+      return { xmult = card.ability.extra.xmult }
     end
   end
 }
 
 SMODS.Joker {
   key = "zenith",
+  unlocked = false,
   atlas = "placeholder",
   pos = { x = 0, y = 0 },
   config = { extra = { xmult_gain = 2, hands_this_round = 0 } },

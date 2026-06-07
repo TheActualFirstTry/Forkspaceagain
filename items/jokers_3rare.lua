@@ -83,7 +83,7 @@ SMODS.Joker {
   key = "crystal",
   atlas = "jokers",
   pos = { x = 2, y = 0 },
-  config = { extra = { xmult = 1, xmult_gain = 0.1 } },
+  config = { extra = { chips = 15 } },
   rarity = 3,
   cost = 10,
   blueprint_compat = true,
@@ -102,14 +102,12 @@ SMODS.Joker {
   calculate = function(self, card, context)
     if context.discard and not context.other_card.debuff and
         context.other_card:get_id() == 12 and not context.blueprint then
-      SMODS.scale_card(card, {
-        ref_table = card.ability.extra,
-        ref_value = "xmult",
-        scalar_value = "xmult_gain",
-        scaling_message = {
-          message = "X" .. (card.ability.extra.xchips + card.ability.extra.xchips_gain) .. " Mult",
-        }
-      })
+      context.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) +
+          card.ability.extra.chips
+      return {
+        message = localize('k_upgrade_ex'),
+        colour = G.C.CHIPS
+      }
     end
   end
 }
@@ -177,13 +175,24 @@ SMODS.Joker {
   end,
 
   calculate = function(self, card, context)
+    if context.buying_self then
+      G.E_MANAGER:add_event(Event({
+        trigger = 'after',
+        delay = 0.4,
+        func = function()
+          play_sound('star_flashbang_equip', 1, 0.7)
+          card:juice_up(0.3, 0.5)
+          return true
+        end
+      }))
+    end
     if context.before and next(context.poker_hands['star_flash']) then
       card.ability.extra.primed = true
       local eval = function()
         return card.ability.extra.primed
       end
       juice_card_until(card, eval)
-      return { message = "Active!" }
+      return { message = "Active!", sound = "star_flashbang_explode" }
     end
     if card.ability.extra.primed == true then
       local _handname, _played = 'High Card', -1
@@ -263,6 +272,14 @@ SMODS.Joker {
         }))
       end
     end
+  end,
+  in_pool = function(self, args)
+    for _, playing_card in ipairs(G.playing_cards or {}) do
+      if playing_card:get_id() == SMODS.Ranks['star_star'].id then
+        return true
+      end
+    end
+    return false
   end
 }
 

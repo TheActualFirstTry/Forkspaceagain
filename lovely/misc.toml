@@ -13,6 +13,22 @@ payload = "local button = e.config.button"
 
 [[patches]]
 [patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+localize{type = 'unlocks', key = res.key or _c.key, set = res.set or _c.set, nodes = desc_nodes, vars = loc_vars, text_colour = res.text_colour, scale = res.scale}
+'''
+position = "at"
+payload = '''
+if _c.rarity and _c.rarity == 'star_galaxy' and specific_vars and not specific_vars.not_hidden then 
+    localize{type = 'unlocks', key = res.key or 'joker_locked_galaxy', set = res.set or 'Other', nodes = desc_nodes, vars = loc_vars, text_colour = res.text_colour, scale = res.scale}
+else
+localize{type = 'unlocks', key = res.key or _c.key, set = res.set or _c.set, nodes = desc_nodes, vars = loc_vars, text_colour = res.text_colour, scale = res.scale}
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
 target = "functions/button_callbacks.lua"
 pattern = "local select_to = card.area == G.pack_cards and G.pack_cards and booster_obj and SMODS.card_select_area(card, booster_obj) and card:selectable_from_pack(booster_obj)"
 position = "after"

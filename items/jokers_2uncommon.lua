@@ -70,8 +70,15 @@ SMODS.Joker {
                 end
             end
         end
+    end,
+    in_pool = function(self, args)
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if playing_card:get_id() == SMODS.Ranks['star_star'].id then
+                return true
+            end
+        end
+        return false
     end
-
 }
 
 SMODS.Joker {
@@ -256,8 +263,11 @@ SMODS.Joker {
 
     calculate = function(self, card, context)
         if context.other_consumeable and context.other_consumeable.ability.set == 'star_astral' and G.GAME[context.other_consumeable.config.center.key .. "_used"] then
-            return { chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"], message_card =
-            context.other_consumeable }
+            return {
+                chips = card.ability.extra.t_chips * G.GAME[context.other_consumeable.config.center.key .. "_used"],
+                message_card =
+                    context.other_consumeable
+            }
         end
     end
 }

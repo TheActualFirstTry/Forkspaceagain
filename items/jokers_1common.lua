@@ -212,6 +212,47 @@ SMODS.Joker {
     end
 }
 
+SMODS.Joker {
+    key = "starwalker",
+    atlas = "placeholder",
+    pos = { x = 0, y = 0 },
+    config = { extra = { t_mult = 0, t_mult_gain = 1 } },
+    rarity = 2,
+    cost = 6,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    pronouns = "he_him",
+
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.t_mult, card.ability.extra.t_mult_gain } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.discard and context.other_card:get_id() == SMODS.Ranks['star_star'].id and not context.other_card.debuff then
+            SMODS.scale_card(card, {
+                ref_table = card.ability.extra,
+                ref_value = "t_mult",
+                scalar_value = "t_mult_gain",
+                scaling_message = {
+                    message = "Upgrade!"
+                }
+            })
+        end
+        if context.joker_main then
+            return { mult = card.ability.extra.t_mult }
+        end
+    end,
+    in_pool = function(self, args)
+        for _, playing_card in ipairs(G.playing_cards or {}) do
+            if playing_card:get_id() == SMODS.Ranks['star_star'].id then
+                return true
+            end
+        end
+        return false
+    end
+}
+
 local smods_smeared_check_ref = SMODS.smeared_check
 function SMODS.smeared_check(card, suit, ...)
     if next(SMODS.find_card("j_star_astroling")) then

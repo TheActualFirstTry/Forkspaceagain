@@ -1,9 +1,22 @@
 STAR_UTIL = {}
 local mod_path = "" .. SMODS.current_mod.path
 
+
+
 for _, f in ipairs(NFS.getDirectoryItems(mod_path .. "lib")) do
   assert(SMODS.load_file("lib/" .. f))()
 end
+
+-- joker sounds
+SMODS.Sound {
+  key = "flashbang_equip",
+  path = "flashbang_equip.ogg"
+}
+
+SMODS.Sound {
+  key = "flashbang_explode",
+  path = "flashbang_explode.ogg"
+}
 
 -- placeholder atlas
 SMODS.Atlas {
@@ -33,6 +46,7 @@ SMODS.Atlas {
   px = 71, py = 95
 }
 
+--achievements atlas
 SMODS.Atlas {
   key = "star_achievements",
   path = "star_achievements.png",
@@ -52,6 +66,8 @@ SMODS.Atlas {
   path = "jokers.png",
   px = 71, py = 95
 }
+
+-- galaxy joker atlas
 SMODS.Atlas {
   key = "galaxy_jokers",
   path = "galaxy_jokers.png",

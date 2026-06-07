@@ -1,5 +1,6 @@
 SMODS.Joker {
     key = "firsttry",
+    unlocked = false,
     atlas = "galaxy_jokers",
     pos = { x = 0, y = 0 },
     soul_pos = { x = 1, y = 0 },
@@ -55,6 +56,14 @@ SMODS.Joker {
                         card.ability.immutable.astral = card.ability.immutable.astral_max
                     end
                 end
+            end
+        end
+    end,
+
+    check_for_unlock = function(self, args)
+        if args.type == "spawn_rarity" then
+            if args.set == "galaxy" then
+                return true
             end
         end
     end

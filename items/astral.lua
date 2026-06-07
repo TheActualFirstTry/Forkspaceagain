@@ -1,11 +1,11 @@
 SMODS.ConsumableType {
-  key = 'star_astral',
-  default = 'c_star_creation',
-  collection = 'b_star_astral_cards',
-  primary_colour = HEX("8574CE"),
-  secondary_colour = HEX("8574CE"),
-  collection_rows = { 4, 4 },
-  shop_rate = 0,
+    key = 'star_astral',
+    default = 'c_star_creation',
+    collection = 'b_star_astral_cards',
+    primary_colour = HEX("8574CE"),
+    secondary_colour = HEX("8574CE"),
+    collection_rows = { 4, 4 },
+    shop_rate = 0,
 }
 
 SMODS.Consumable {
@@ -16,7 +16,7 @@ SMODS.Consumable {
     config = { extra = { dollar_loss = 5, dollar_loss_loss = 5 }, max_highlighted = 1 },
     loc_vars = function(self, info_queue, card)
         local final_loss = card.ability.extra.dollar_loss +
-        (card.ability.extra.dollar_loss_loss * (G.GAME.c_star_chaos_used or 0))
+            (card.ability.extra.dollar_loss_loss * (G.GAME.c_star_chaos_used or 0))
         return { vars = { G.GAME.c_star_chaos_used or 0, card.ability.max_highlighted, final_loss, card.ability.extra.dollar_loss_loss } }
     end,
 
@@ -72,7 +72,7 @@ SMODS.Consumable {
             end
         end
         ease_dollars(-1 *
-        (card.ability.extra.dollar_loss + (card.ability.extra.dollar_loss_loss * (G.GAME.c_star_chaos_used or 0))))
+            (card.ability.extra.dollar_loss + (card.ability.extra.dollar_loss_loss * (G.GAME.c_star_chaos_used or 0))))
     end,
 
     can_use = function(self, card)
@@ -156,6 +156,7 @@ SMODS.Consumable {
             delay = 0.4,
             func = function()
                 play_sound('timpani')
+                check_for_unlock { type = "spawn_rarity", set = "galaxy" }
                 SMODS.add_card({ set = 'Joker', rarity = 'star_galaxy', key_append = 'star' })
                 card:juice_up(0.3, 0.5)
                 return true
@@ -169,9 +170,9 @@ SMODS.Consumable {
 }
 
 SMODS.current_mod.calculate = function(self, context)
-  if context.using_consumeable and context.consumeable.ability.set == 'star_astral' then
-    G.GAME[context.consumeable.config.center.key .. "_used"] = (G.GAME[context.consumeable.config.center.key .. "_used"] or 0) + 1
-  end
+    if context.using_consumeable and context.consumeable.ability.set == 'star_astral' then
+        G.GAME[context.consumeable.config.center.key .. "_used"] = (G.GAME[context.consumeable.config.center.key .. "_used"] or 0) + 1
+    end
 end
 
 --  "chaos",
