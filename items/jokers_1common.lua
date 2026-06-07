@@ -122,7 +122,7 @@ SMODS.Joker {
     end,
 
     calculate = function(self, card, context)
-        if context.before and next(context.poker_hands['Straight']) then
+        if context.before and not context.blueprint and next(context.poker_hands['Straight']) then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = "t_score",

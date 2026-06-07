@@ -248,6 +248,15 @@ return { descriptions = {
         }
         }
       },
+      j_star_zenith = {
+        name = "Zenith",
+        text = {
+          "Gives {X:mult,C:white}X#1#{} Mult per",
+          "unique {C:attention}poker hand{}",
+          "played this round",
+          "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+        }
+      },
       j_star_clanker = {
         name = "Clanker!",
         text = {

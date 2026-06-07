@@ -34,7 +34,6 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   config = { extra = { repetitions = 1 } },
   rarity = 3,
-  cost = 9,
   cost = 8,
   blueprint_compat = true,
   eternal_compat = true,
@@ -102,8 +101,15 @@ SMODS.Joker {
   end,
   calculate = function(self, card, context)
     if context.discard and not context.other_card.debuff and
-        context.other_card:get_id() == 12 then
-
+        context.other_card:get_id() == 12 and not context.blueprint then
+      SMODS.scale_card(card, {
+        ref_table = card.ability.extra,
+        ref_value = "xmult",
+        scalar_value = "xmult_gain",
+        scaling_message = {
+          message = "X" .. (card.ability.extra.xchips + card.ability.extra.xchips_gain) .. " Mult",
+        }
+      })
     end
   end
 }
@@ -133,6 +139,7 @@ SMODS.Joker {
   calculate = function(self, card, context)
     if context.end_of_round and context.game_over == false and G.GAME.dollars <= card.ability.extra.dollars then
       G.E_MANAGER:add_event(Event({
+        delay = 0.4,
         func = (function()
           add_tag({ key = 'tag_coupon' })
           play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
@@ -152,9 +159,9 @@ SMODS.Joker {
   config = { extra = { primed = false, } },
   rarity = 3,
   cost = 8,
-  blueprint_compat = true,
+  blueprint_compat = false,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "it_its",
 
   loc_vars = function(self, info_queue, card)
@@ -205,8 +212,8 @@ SMODS.Joker {
   rarity = 3,
   cost = 8,
   blueprint_compat = true,
-  eternal_compat = true,
-  perishable_compat = false,
+  eternal_compat = false,
+  perishable_compat = true,
   pronouns = "it_its",
 
   loc_vars = function(self, info_queue, card)
@@ -235,9 +242,9 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   rarity = 3,
   cost = 8,
-  blueprint_compat = true,
+  blueprint_compat = false,
   eternal_compat = true,
-  perishable_compat = false,
+  perishable_compat = true,
   pronouns = "he_him",
 
   calculate = function(self, card, context)
@@ -311,8 +318,8 @@ SMODS.Joker {
   pos = { x = 0, y = 0 },
   config = { extra = { active = false } },
   rarity = 3,
-  cost = 10,
-  blueprint_compat = false,
+  cost = 9,
+  blueprint_compat = true,
   eternal_compat = true,
   perishable_compat = true,
   pronouns = "he_him",
