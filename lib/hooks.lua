@@ -1,24 +1,3 @@
-local old_set_consumeable_usage = set_consumeable_usage
-function set_consumeable_usage(card)
-  if card.config.center_key and (card.config.center.set == 'star_astral') then
-    G.E_MANAGER:add_event(Event({
-      trigger = 'immediate',
-      func = function()
-        G.E_MANAGER:add_event(Event({
-          trigger = 'immediate',
-          func = function()
-            G.GAME.last_astral_card = card.config.center_key
-            return true
-          end
-        }))
-        return true
-      end
-    }))
-  end
-
-  return old_set_consumeable_usage(card);
-end
-
 local uasb_ref = G.UIDEF.use_and_sell_buttons
 function G.UIDEF.use_and_sell_buttons(card)
   if (card.area == G.pack_cards and G.pack_cards) and card.ability.consumeable then

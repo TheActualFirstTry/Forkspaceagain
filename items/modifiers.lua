@@ -24,3 +24,18 @@ SMODS.Rank {
     end
   end
 }
+
+SMODS.Enhancement {
+  key = 'iron',
+  atlas = 'placeholder',
+  pos = { x = 1, y = 1 },
+  config = { bonus = 0, extra = { bonus_gain = 15 } },
+  loc_vars = function(self, info_queue, card)
+    return { vars = { card.ability.extra.bonus_gain } }
+  end,
+  calculate = function(self, card, context)
+    if context.before then
+      card.ability.bonus = card.ability.extra.bonus_gain * G.GAME.hands[context.scoring_name].level
+    end
+  end
+}

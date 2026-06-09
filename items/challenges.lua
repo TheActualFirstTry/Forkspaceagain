@@ -11,16 +11,33 @@ SMODS.Challenge {
     restrictions = {
         banned_cards = {
             { id = 'v_seed_money' }, { id = 'v_money_tree' }, { id = 'j_to_the_moon' },
-            { id = 'j_rocket' }, { id = 'j_golden' }, { id = 'j_satellite' }, },
+            { id = 'j_rocket' }, { id = 'j_golden' }, { id = 'j_satellite' } },
         banned_tags = { { id = 'tag_investment' }, }
     },
 }
 
 SMODS.Challenge {
+    key = 'foley',
+    rules = {
+        modifiers = { { id = 'discards', value = 6 } } },
+    jokers = {
+        { id = 'j_star_weathergirl', eternal = true }, { id = 'j_certificate', eternal = true, edition = 'negative' }
+    },
+    deck = {
+        type = 'Challenge Deck',
+        no_ranks = {
+            J = true,
+            Q = true,
+            K = true,
+        }
+    }
+}
+
+SMODS.Challenge {
     key = 'order',
     rules = {
-        custom = { { id = 'all_common' }, },
-        modifiers = { { id = 'joker_slots', value = 8 }, }, },
+        custom = { { id = 'all_common' } },
+        modifiers = { { id = 'joker_slots', value = 8 } } },
     apply = function(self)
         for k in pairs(SMODS.Rarities) do
             if k ~= "Common" then

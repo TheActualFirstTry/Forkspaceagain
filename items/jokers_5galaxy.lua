@@ -1,4 +1,50 @@
 SMODS.Joker {
+    key = "felli",
+    atlas = "placeholder",
+    pos = { x = 0, y = 0 },
+    config = { extra = { xmult = 1, xmult_gain = 1 } },
+    rarity = 'star_galaxy',
+    cost = 50,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = false,
+    pronouns = "she_her",
+
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = { key = "star_spellbound_mimic", set = "Other", vars = SMODS.Stickers.star_spellbound:loc_vars(info_queue, card).vars }
+        return { vars = { card.ability.extra.xmult, card.ability.extra.xmult_gain } }
+    end,
+
+    calculate = function(self, card, context)
+        if context.card_added and not context.blueprint and context.card.ability.set == 'Joker' then
+            local joker = context.card
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after',
+                func = function()
+                    play_sound('tarot1')
+                    play_sound('gold_seal', 1.2, 0.4)
+                    card:juice_up()
+                    joker:juice_up()
+                    joker:add_sticker('star_spellbound', true)
+                    return true
+                end
+            }))
+        end
+        if context.selling_card and context.card.set == 'Joker' then
+            SMODS.scale_card(card, {
+                ref_table = card.ability.extra,
+                ref_value = "xmult",
+                scalar_value = "xmult_gain",
+                colour = G.C.MULT
+            })
+        end
+        if context.joker_main then
+            return { xmult = card.ability.extra.xmult }
+        end
+    end
+}
+
+SMODS.Joker {
     key = "firsttry",
     unlocked = false,
     atlas = "galaxy_jokers",

@@ -83,7 +83,7 @@ SMODS.Joker {
   key = "crystal",
   atlas = "jokers",
   pos = { x = 2, y = 0 },
-  config = { extra = { chips = 15 } },
+  config = { extra = { p_chips = 25 } },
   rarity = 3,
   cost = 10,
   blueprint_compat = true,
@@ -97,13 +97,13 @@ SMODS.Joker {
     end
   end,
   loc_vars = function(self, info_queue, card)
-    return { vars = {} }
+    return { vars = { card.ability.extra.p_chips } }
   end,
   calculate = function(self, card, context)
     if context.discard and not context.other_card.debuff and
         context.other_card:get_id() == 12 then
       context.other_card.ability.perma_bonus = (context.other_card.ability.perma_bonus or 0) +
-          card.ability.extra.chips
+          card.ability.extra.p_chips
       return {
         message = localize('k_upgrade_ex'),
         colour = G.C.CHIPS
@@ -149,6 +149,46 @@ SMODS.Joker {
         end)
       }))
     end
+  end
+}
+
+SMODS.Joker {
+  key = "meta_knight",
+  atlas = "jokers",
+  pos = { x = 1, y = 2 },
+  config = { extra = { } },
+  rarity = 3,
+  cost = 8,
+  blueprint_compat = true,
+  eternal_compat = true,
+  perishable_compat = false,
+  pronouns = "he_him",
+
+  loc_vars = function(self, info_queue, card)
+    return { vars = { } }
+  end,
+
+  calculate = function(self, card, context)
+  end
+}
+
+SMODS.Joker {
+  key = "galacta_knight",
+  atlas = "jokers",
+  pos = { x = 2, y = 2 },
+  config = { extra = { } },
+  rarity = 3,
+  cost = 8,
+  blueprint_compat = true,
+  eternal_compat = true,
+  perishable_compat = false,
+  pronouns = "he_him",
+
+  loc_vars = function(self, info_queue, card)
+    return { vars = { } }
+  end,
+
+  calculate = function(self, card, context)
   end
 }
 

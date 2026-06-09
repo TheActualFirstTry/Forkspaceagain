@@ -46,7 +46,7 @@ return {
         name = "Crystal",
         text = {
           "Discarded {C:attention}Queens{}",
-          "permanently gain {C:chips}+15{} Chips"
+          "permanently gain {C:chips}+#1#{} Chips"
         }
       },
       j_star_shard = {
@@ -55,6 +55,18 @@ return {
           "Create a {C:attention}Coupon Tag{}",
           "if {C:attention}Blind{} is defeated",
           "with {C:money}$#1#{} or less"
+        }
+      },
+      j_star_meta_knight = {
+        name = "Meta Knight",
+        text = {
+
+        }
+      },
+      j_star_galacta_knight = {
+        name = "Galacta Knight",
+        text = {
+
         }
       },
       j_star_astroling = {
@@ -101,15 +113,6 @@ return {
           "hand gives {C:money}$#1#"
         }
       },
-      j_star_gerson = {
-        name = "Gerson",
-        text = {
-          "This Joker gains {C:purple}+#2#{} Score",
-          "if played hand contains",
-          "a {C:attention}Straight{}",
-          "{C:inactive}(Currently {C:purple}+#1#{C:inactive} Score)"
-        }
-      },
       j_star_galileo = {
         name = "Galileo",
         text = {
@@ -120,8 +123,9 @@ return {
       j_star_weathergirl = {
         name = "weathergirl",
         text = {
-          "{C:chips}+#1#{} Chips,",
-          "{C:attention}Lose all discards{} when {C:attention}Blind{} is selected"
+          "When drawing cards, draw",
+          "{C:attention}#1#{} additional cards if",
+          "{C:attention}0{} discards are remaining"
         }
       },
       j_star_magolor = {
@@ -192,14 +196,6 @@ return {
           "{C:inactive}(Most played poker hand)"
         }
       },
-      j_star_copper_shortsword = {
-        name = "Copper Shortsword",
-        text = {
-          "This Joker gains {C:chips}+#1#{} Chips",
-          "for every destroyed {C:attention}playing card{}",
-          "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips){}"
-        }
-      },
       j_star_radiant_joker = {
         name = "Radiant Joker",
         text = {
@@ -223,20 +219,24 @@ return {
           "when changing their {C:attention}suit{}",
         }
       },
-      j_star_starwalker = {
-        name = "The Original Starwalker",
-        text = {
-          "This Joker gains {C:mult}+#2#{} Mult",
-          "for each discarded {C:attention}Star{}",
-          "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult){}"
-        }
-      },
       j_star_the_grace = {
         name = "The Grace",
         text = {
           "{X:mult,C:white}X#1#{} Mult if played",
           "hand contains",
           "a {C:attention}Flash{}"
+        }
+      },
+      j_star_felli = {
+        name = "Lily Felli",
+        text = { {
+          "Obtained Jokers have the {C:attention}Spellbound{}",
+          "sticker applied to them"
+        }, {
+          "This Joker gains {X:mult,C:white}X#2#{} Mult",
+          "for each Joker {C:attention}sold",
+          "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)"
+        }
         }
       },
       j_star_firsttry = {
@@ -280,18 +280,6 @@ return {
           "{E:1,s:1.3}?????",
         }
       },
-      j_star_zenith = {
-        name = "Zenith",
-        text = {
-          "Gives {X:mult,C:white}X#1#{} Mult per",
-          "unique {C:attention}poker hand{}",
-          "played this round",
-          "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
-        },
-        unlock = {
-          "{E:1,s:1.3}?????",
-        }
-      },
       j_star_clanker = {
         name = "Clanker!",
         text = {
@@ -302,16 +290,35 @@ return {
         }
       }
     },
+    Enhanced = {
+      m_star_iron = {
+        name = "I.R.O.N. Card",
+        text = {
+          "{C:chips}+#1#{} bonus Chips for",
+          "each {C:attention}level{} the played",
+          "{C:attention}poker hand{} has",
+        },
+      },
+    },
     Tag = {
       tag_star_stardust = {
         name = "Stardust Tag",
         text = {
           "Gives a free",
-          "{C:attention}Space Pack",
+          "{C:attention}Space Pack"
         },
       },
     },
     Other = {
+      star_spellbound_mimic = {
+        name = "Spellbound",
+        text = {
+          "Can't be sold",
+          "or destroyed",
+          "for {C:attention}#2#{} rounds",
+          "{C:inactive}({C:attention}#1#{C:inactive} remaining)"
+        }
+      },
       joker_locked_galaxy = {
         name = "Locked",
         text = {
@@ -342,6 +349,15 @@ return {
           "{C:attention}#2#{C:star_astral} Astral{} cards to",
           "be used immediately",
         }
+      },
+      star_spellbound = {
+        name = "Spellbound",
+        text = {
+          "Can't be sold",
+          "or destroyed",
+          "for {C:attention}#2#{} rounds",
+          "{C:inactive}({C:attention}#1#{C:inactive} remaining)"
+        },
       },
       undiscovered_star_astral = {
         name = "Not Discovered",
@@ -492,8 +508,24 @@ return {
           "{S:1.5,C:star_astral,E:1}#1#"
         }
       },
+    },
+    Stake = {
+      stake_star_opal = {
+        name = "Opal Stake",
+        text = {
+          "Shop can have {C:attention}Spellbound{} Jokers",
+          "{C:inactive,s:0.8}(Can't be sold or destroyed for {C:attention,s:0.8}3{C:inactive,s:0.8} rounds)",
+          "{s:0.8}Applies Black Glass Stake",
+        },
+      },
+      stake_star_black_glass = {
+        name = "Black Glass Stake",
+        text = {
+          "{C:attention}Vanilla{} Jokers no longer",
+          "appear in the {C:attention}shop",
+        },
+      },
     }
-
   },
   misc = {
     v_text = {
@@ -501,6 +533,7 @@ return {
     },
     challenge_names = {
       c_star_shopping = "Go Shopping, Girl",
+      c_star_foley = "Didn't You See The News Today?",
       c_star_order = "Order"
     },
 
@@ -531,6 +564,7 @@ return {
       star_ui_shaders = "Shaders",
     },
     labels = {
+      star_spellbound = "Spellbound",
       k_star_galaxy = "Galaxy",
       star_astral = "Astral Card"
     },

@@ -1,7 +1,11 @@
 STAR_UTIL = {}
 local mod_path = "" .. SMODS.current_mod.path
 
-
+SMODS.current_mod.menu_cards = function()
+	return {
+		{set = 'Joker'}, -- adds a random Tarot to the menu
+	}
+end
 
 for _, f in ipairs(NFS.getDirectoryItems(mod_path .. "lib")) do
   assert(SMODS.load_file("lib/" .. f))()

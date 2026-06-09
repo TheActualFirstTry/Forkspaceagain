@@ -258,34 +258,25 @@ SMODS.Joker {
     key = "weathergirl",
     atlas = "placeholder",
     pos = { x = 0, y = 0 },
-    config = { extra = { t_chips = 125 } },
+    config = { extra = { draw_num = 2 } },
     rarity = 2,
-    cost = 7,
-    blueprint_compat = true,
+    cost = 8,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     pronouns = "she_her",
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.t_chips } }
+        return { vars = { card.ability.extra.draw_num } }
     end,
 
     calculate = function(self, card, context)
-        if context.joker_main then
-            return { chips = card.ability.extra.t_chips }
+        if context.drawing_cards and not card.ability.extra.active and G.GAME.current_round.discards_left <= 0 then
+            card.ability.extra.active = true
+            return { modify = context.amount + card.ability.extra.draw_num, message = "Weathered!" }
         end
-        if context.setting_blind and not context.blueprint then
-            G.E_MANAGER:add_event(Event({
-                trigger = 'before',
-                func = function()
-                    ease_discard(-G.GAME.current_round.discards_left, nil, true)
-                    return true
-                end
-            }))
-            SMODS.calculate_effect(
-                { message = "Weathered!" },
-                context.blueprint_card or card)
-            return true
+        if context.hand_drawn and card.ability.extra.active then
+            card.ability.extra.active = false
         end
     end }
 
