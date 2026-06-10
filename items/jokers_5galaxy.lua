@@ -1,7 +1,9 @@
 SMODS.Joker {
     key = "felli",
-    atlas = "placeholder",
-    pos = { x = 0, y = 0 },
+    unlocked = false,
+    atlas = "jokers",
+    pos = { x = 10, y = 6 },
+    soul_pos = { x = 11, y = 6 },
     config = { extra = { xmult = 1, xmult_gain = 1 } },
     rarity = 'star_galaxy',
     cost = 50,
@@ -11,7 +13,12 @@ SMODS.Joker {
     pronouns = "she_her",
 
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = { key = "star_spellbound_mimic", set = "Other", vars = SMODS.Stickers.star_spellbound:loc_vars(info_queue, card).vars }
+        info_queue[#info_queue + 1] = {
+            key = "star_spellbound_mimic",
+            set = "Other",
+            vars = SMODS.Stickers
+                .star_spellbound:loc_vars(info_queue, card).vars
+        }
         return { vars = { card.ability.extra.xmult, card.ability.extra.xmult_gain } }
     end,
 
@@ -30,7 +37,7 @@ SMODS.Joker {
                 end
             }))
         end
-        if context.selling_card and context.card.set == 'Joker' then
+        if context.selling_card and context.card.ability.set == 'Joker' then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = "xmult",

@@ -265,8 +265,8 @@ return {
           "that {C:star_astral}Astral{} card this run",
         }
       },
-      j_star_loop_rooms = {
-        name = "Looping The Rooms",
+      j_star_hatsune_miku = {
+        name = "Hatsune Miku",
         text = { {
           "{C:tarot}Tarot{}, {C:planet}Planet{}, {C:spectral}Spectral{}, and {C:star_astral}Astral{}",
           "cards may appear multiple times",

@@ -1,5 +1,5 @@
 SMODS.Joker {
-  key = "loop_rooms",
+  key = "hatsune_miku",
   atlas = "placeholder",
   unlocked = false,
   pos = { x = 0, y = 0 },

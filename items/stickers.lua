@@ -13,7 +13,7 @@ SMODS.Sticker {
     end,
 
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.star_spellbound.perish_tally, 3 } }
+        return { vars = { ((card.ability or {}).star_spellbound or self.config).perish_tally, 3 } }
     end,
 
     calculate = function(self, card, context)
